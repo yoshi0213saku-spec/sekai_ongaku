@@ -114,7 +114,7 @@
 
                 <hr class="border-gray-100">
 
-                <!-- 各カテゴリー解説 (デザインSVG入り & リンク付き) -->
+                <!-- 各カテゴリー解説 -->
                 <section>
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-xs font-bold text-purple-600 uppercase tracking-[0.3em]">Music Categories</h2>
@@ -321,9 +321,32 @@
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">待機中...</span>
                 </div>
                 
-                <audio id="main-audio" controls class="w-full h-10 mb-8 focus:outline-none">
+                <audio id="main-audio" controls class="w-full h-10 mb-6 focus:outline-none">
                     お使いのブラウザはオーディオ再生に対応していません。
                 </audio>
+
+                <!-- AI Insight 表示エリア (スクロール不要で表示されるようプレーヤー直下に配置) -->
+                <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-6 md:p-8 bg-purple-600 text-white shadow-xl shadow-purple-200/40 border border-purple-500 transition-all duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/40">
+                        <div class="flex items-center space-x-3">
+                            <!-- 再生 / 一時停止 ボタン -->
+                            <button id="ai-play-btn" onclick="togglePlayPause()" class="w-12 h-12 rounded-full bg-white text-purple-600 flex items-center justify-center shadow-lg hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
+                                <svg id="ai-play-icon" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <div>
+                                <span id="ai-track-title" class="text-sm font-black text-purple-100 block">楽曲を選択中</span>
+                                <span id="ai-status-guide" class="text-xs text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-1.5 self-start sm:self-auto bg-purple-700/50 px-3 py-1.5 rounded-full border border-purple-400/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-purple-100">AI MUSICOLOGIST INSIGHT</span>
+                        </div>
+                    </div>
+                    <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50"></p>
+                </div>
 
                 <div class="space-y-6" id="playlist">
 
@@ -584,29 +607,6 @@
                 </div>
             </div>
 
-            <!-- AI Insight 表示エリア -->
-            <div id="ai-insight-panel" class="hidden glass-card rounded-3xl p-6 md:p-8 bg-purple-600 text-white shadow-xl shadow-purple-200/40 border border-purple-500 transition-all duration-300">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/40">
-                    <div class="flex items-center space-x-3">
-                        <!-- 再生 / 一時停止 ボタン -->
-                        <button id="ai-play-btn" onclick="togglePlayPause()" class="w-12 h-12 rounded-full bg-white text-purple-600 flex items-center justify-center shadow-lg hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
-                            <svg id="ai-play-icon" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </button>
-                        <div>
-                            <span id="ai-track-title" class="text-sm font-black text-purple-100 block">楽曲を選択中</span>
-                            <span id="ai-status-guide" class="text-xs text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-1.5 self-start sm:self-auto bg-purple-700/50 px-3 py-1.5 rounded-full border border-purple-400/30">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                        </svg>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-purple-100">AI MUSICOLOGIST INSIGHT</span>
-                    </div>
-                </div>
-                <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50"></p>
-            </div>
-
             <!-- キュレーター紹介 -->
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
@@ -669,6 +669,9 @@
             // AI Insightパネルの表示更新
             insightPanel.classList.remove('hidden');
             insightText.innerText = insight;
+
+            // スクロールなしでプレイヤーとAI解説がしっかり収まるようスムーズ移動
+            insightPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         /**
