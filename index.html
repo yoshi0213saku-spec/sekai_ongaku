@@ -325,7 +325,7 @@
                     お使いのブラウザはオーディオ再生に対応していません。
                 </audio>
 
-                <!-- AI Insight 表示エリア (スクロール不要で表示されるようプレーヤー直下に配置) -->
+                <!-- AI Insight 表示エリア (プレーヤー直下配置) -->
                 <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-6 md:p-8 bg-purple-600 text-white shadow-xl shadow-purple-200/40 border border-purple-500 transition-all duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/40">
                         <div class="flex items-center space-x-3">
@@ -398,7 +398,7 @@
                                 </div>
                             </div>
 
-                            <!-- 演歌 3 (新規追加) -->
+                            <!-- 演歌 3 -->
                             <div onclick="playTrack('./boukyo_onabushi.mp3', '望郷おんな節', 'AI分析：故郷への強い情愛と女心の切なさを歌い上げる情緒。豊かなこぶしの波形と和音階の繊細な音色変化を解析。', this)" 
                                  class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <div class="flex items-center justify-between">
@@ -409,6 +409,22 @@
                                         <div>
                                             <h4 class="text-sm font-bold text-gray-800">望郷おんな節</h4>
                                             <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • boukyo_onabushi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 演歌 4 -->
+                            <div onclick="playTrack('./ipon_no_michi.mp3', '一本の道', 'AI分析：人生の決意とまっすぐな情熱を込めた旋律。重厚なメロディラインと意志の強さを可視化。', this)" 
+                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-gray-800">一本の道</h4>
+                                            <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • ipon_no_michi</p>
                                         </div>
                                     </div>
                                 </div>
@@ -623,7 +639,6 @@
                 </div>
             </div>
 
-            <!-- キュレーター紹介 -->
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
                 
@@ -647,10 +662,6 @@
     <script>
         /**
          * 楽曲再生とAI Insightパネルの更新処理
-         * @param {string} url - オーディオファイルのパス
-         * @param {string} title - 楽曲タイトル
-         * @param {string} insight - AIによる分析テキスト
-         * @param {HTMLElement} element - クリックされたリスト要素
          */
         function playTrack(url, title, insight, element) {
             const audio = document.getElementById('main-audio');
