@@ -40,7 +40,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
-        /* カテゴリーカードスタイル */
         .category-card {
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -102,7 +101,6 @@
 
         <div class="space-y-8 fade-in" style="animation-delay: 0.1s;">
             
-            <!-- アーカイブ概要 & カテゴリー解説 -->
             <div class="glass-card rounded-3xl p-8 space-y-10 border border-gray-100">
                 <section>
                     <h2 class="text-xs font-bold text-purple-500 uppercase tracking-[0.3em] mb-4">Archive Overview</h2>
@@ -124,16 +122,13 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         
                         <!-- 1. 演歌 -->
-                        <a href="#cat-enka" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-purple-50/30 rounded-2xl border border-purple-100/60 hover:border-purple-300 transition-all block group shadow-sm">
+                        <a href="#cat-enka" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-rose-50/30 rounded-2xl border border-rose-100/60 hover:border-rose-300 transition-all block group shadow-sm">
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-rose-100/80 border border-rose-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-rose-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="32" cy="22" r="14" fill="#FDA4AF" fill-opacity="0.4"/>
                                         <circle cx="32" cy="22" r="10" fill="#F43F5E" fill-opacity="0.8"/>
                                         <path d="M12 50L26 30L34 38L44 26L52 50H12Z" fill="#881337"/>
-                                        <path d="M26 30L29 34.5L26 36L22.5 35L26 30Z" fill="#FFF"/>
-                                        <path d="M44 26L46.5 30.5L44 32L41.5 30.5L44 26Z" fill="#FFF"/>
-                                        <path d="M48 16C48 16 50 12 53 14C56 16 52 19 48 16Z" fill="#E11D48"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -142,7 +137,6 @@
                                             演歌
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-100">日本</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
                                     <p class="text-[12px] text-gray-600 leading-relaxed">日本の魂を歌う。独特の「こぶし」と和の音階が、郷愁や男女の情愛を豊かに表現します。</p>
                                 </div>
@@ -154,14 +148,8 @@
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-amber-100/80 border border-amber-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-amber-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 40C10 32 54 32 54 40C54 48 10 48 10 40Z" fill="#D97706" stroke="#92400E" stroke-width="2"/>
-                                        <ellipse cx="32" cy="26" rx="22" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
-                                        <path d="M10 26V40C10 46 54 46 54 40V26" fill="none" stroke="#B45309" stroke-width="2"/>
-                                        <circle cx="20" cy="33" r="1.5" fill="#78350F"/>
-                                        <circle cx="32" cy="35" r="1.5" fill="#78350F"/>
-                                        <circle cx="44" cy="33" r="1.5" fill="#78350F"/>
-                                        <line x1="16" y1="12" x2="26" y2="24" stroke="#92400E" stroke-width="3" stroke-linecap="round"/>
-                                        <line x1="48" y1="12" x2="38" y2="24" stroke="#92400E" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M10 40C10 32 54 32 54 40C54 48 10 48 10 40Z" fill="#D97706"/>
+                                        <ellipse cx="32" cy="26" rx="22" ry="10" fill="#FEF3C7"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -170,7 +158,6 @@
                                             民謡
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-100">伝統風土</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
                                     <p class="text-[12px] text-gray-600 leading-relaxed">労働や祭礼の中から生まれた生活の歌。土地ごとの風土やリズムが反映された原風景の音楽。</p>
                                 </div>
@@ -182,13 +169,7 @@
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-blue-100/80 border border-blue-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-blue-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 50C20 44 44 56 56 50" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M12 56C24 50 40 60 52 56" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-                                        <circle cx="36" cy="34" r="13" fill="#1D4ED8" stroke="#60A5FA" stroke-width="2"/>
-                                        <circle cx="36" cy="34" r="5" fill="#EFF6FF"/>
-                                        <line x1="36" y1="21" x2="20" y2="10" stroke="#1E40AF" stroke-width="3" stroke-linecap="round"/>
-                                        <circle cx="18" cy="8" r="3" fill="#2563EB"/>
-                                        <path d="M48 10A8 8 0 0 1 54 22A9 9 0 0 0 48 10Z" fill="#F59E0B"/>
+                                        <circle cx="36" cy="34" r="13" fill="#1D4ED8"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -197,7 +178,6 @@
                                             ファド
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">ポルトガル</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
                                     <p class="text-[12px] text-gray-600 leading-relaxed">ポルトガルの運命（サウダージ）。失ったものへの思慕や宿命を歌い上げる哀愁の大衆歌謡。</p>
                                 </div>
@@ -209,13 +189,7 @@
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-red-100/80 border border-red-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-red-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16 48C24 32 40 30 48 48C38 56 26 56 16 48Z" fill="#DC2626"/>
-                                        <path d="M22 52C28 40 38 38 44 52C36 58 28 57 22 52Z" fill="#EF4444"/>
-                                        <circle cx="32" cy="22" r="8" fill="#B91C1C"/>
-                                        <path d="M28 20C28 17.5 30 16 32 16C34 16 36 17.5 36 20C36 22 32 25 32 25C32 25 28 22 28 20Z" fill="#F87171"/>
-                                        <circle cx="32" cy="20" r="3" fill="#FFF"/>
-                                        <path d="M12 24L20 18" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M52 24L44 18" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M16 48C24 32 40 30 48 48Z" fill="#DC2626"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -224,9 +198,8 @@
                                             フラメンコ
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-red-50 text-red-600 border border-red-100">スペイン</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
-                                    <p class="text-[12px] text-gray-600 leading-relaxed">情熱と魂の叫び。スペイン南部で培われた鋭いリズムと深い感情が、歌とギターで爆発します。</p>
+                                    <p class="text-[12px] text-gray-600 leading-relaxed">情熱と魂の叫び。スペイン南部で培われた鋭いリズムと深い感情が歌とギターで爆発します。</p>
                                 </div>
                             </div>
                         </a>
@@ -236,13 +209,7 @@
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-pink-100/80 border border-pink-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-pink-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M32 10L24 50H40L32 10Z" fill="none" stroke="#DB2777" stroke-width="2"/>
-                                        <line x1="28" y1="30" x2="36" y2="30" stroke="#DB2777" stroke-width="2"/>
-                                        <line x1="26" y1="40" x2="38" y2="40" stroke="#DB2777" stroke-width="2"/>
-                                        <path d="M32 6V10" stroke="#D97706" stroke-width="2"/>
-                                        <circle cx="16" cy="24" r="3" fill="#EC4899"/>
-                                        <path d="M19 24V14L28 12V22" stroke="#EC4899" stroke-width="2" stroke-linecap="round"/>
-                                        <circle cx="25" cy="22" r="3" fill="#EC4899"/>
+                                        <circle cx="16" cy="24" r="5" fill="#EC4899"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -251,7 +218,6 @@
                                             シャンソン
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-pink-50 text-pink-600 border border-pink-100">フランス</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
                                     <p class="text-[12px] text-gray-600 leading-relaxed">フランスの物語歌。歌詞が持つドラマ性を重視し、パリの日常の機微や愛を演劇的に歌い上げます。</p>
                                 </div>
@@ -263,12 +229,7 @@
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-purple-100/80 border border-purple-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-purple-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22 12V36C22 44 28 50 36 50C44 50 48 44 48 38V34" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
-                                        <path d="M44 32L52 26V40L44 34V32Z" fill="#DDD6FE" stroke="#6D28D9" stroke-width="1.5"/>
-                                        <circle cx="22" cy="14" r="3" fill="#6D28D9"/>
-                                        <path d="M12 28C16 20 28 22 28 14" stroke="#DB2777" stroke-width="2" stroke-dasharray="2 2" stroke-linecap="round"/>
-                                        <circle cx="36" cy="22" r="2" fill="#8B5CF6"/>
-                                        <circle cx="40" cy="16" r="1.5" fill="#8B5CF6"/>
+                                        <path d="M22 12V36C22 44 28 50 36 50" fill="none" stroke="#7C3AED" stroke-width="3"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -277,7 +238,6 @@
                                             ジャズ
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-violet-50 text-violet-600 border border-violet-100">アメリカ</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
                                     <p class="text-[12px] text-gray-600 leading-relaxed">即興とスイング。自由な感性と洗練された理論が融合し、アメリカで花開いた現代音楽の礎。</p>
                                 </div>
@@ -285,17 +245,11 @@
                         </a>
 
                         <!-- 7. タンゴ -->
-                        <a href="#cat-tango" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-emerald-50/30 rounded-2xl border border-emerald-100/60 hover:border-emerald-300 transition-all block group shadow-sm md:col-span-2">
+                        <a href="#cat-tango" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-emerald-50/30 rounded-2xl border border-emerald-100/60 hover:border-emerald-300 transition-all block group shadow-sm">
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-emerald-100/80 border border-emerald-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
                                     <svg class="cat-svg w-6 h-6 text-emerald-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 20L20 14L28 20L36 14L44 20L52 14V44L44 50L36 44L28 50L20 44L12 50V20Z" fill="#047857" stroke="#059669" stroke-width="2"/>
-                                        <line x1="20" y1="14" x2="20" y2="44" stroke="#A7F3D0" stroke-width="1.5"/>
-                                        <line x1="28" y1="20" x2="28" y2="50" stroke="#A7F3D0" stroke-width="1.5"/>
-                                        <line x1="36" y1="14" x2="36" y2="44" stroke="#A7F3D0" stroke-width="1.5"/>
-                                        <line x1="44" y1="20" x2="44" y2="50" stroke="#A7F3D0" stroke-width="1.5"/>
-                                        <circle cx="8" cy="32" r="3" fill="#10B981"/>
-                                        <circle cx="56" cy="32" r="3" fill="#10B981"/>
+                                        <path d="M12 20L20 14L28 20L36 14L44 20L52 14V44H12V20Z" fill="#047857"/>
                                     </svg>
                                 </div>
                                 <div class="flex-1">
@@ -304,9 +258,29 @@
                                             タンゴ
                                             <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">アルゼンチン</span>
                                         </h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-300 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </div>
-                                    <p class="text-[12px] text-gray-600 leading-relaxed">情熱と鋭いリズム。アルゼンチンのブエノスアイレスで発展し、バンドネオンの切ない音色と激しいステップが交錯します。</p>
+                                    <p class="text-[12px] text-gray-600 leading-relaxed">情熱と鋭いリズム。バンドネオンの切ない音色と激しいステップが交錯します。</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 8. カンツオーネ (新規追加) -->
+                        <a href="#cat-canzone" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-sky-50/30 rounded-2xl border border-sky-100/60 hover:border-sky-300 transition-all block group shadow-sm">
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-11 h-11 rounded-lg bg-sky-100/80 border border-sky-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
+                                    <svg class="cat-svg w-6 h-6 text-sky-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="32" cy="20" r="10" fill="#38BDF8" fill-opacity="0.6"/>
+                                        <path d="M16 48C24 38 40 38 48 48" stroke="#0284C7" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="text-base font-black text-gray-800 group-hover:text-sky-700 transition-colors flex items-center gap-1.5">
+                                            カンツオーネ
+                                            <span class="text-[10px] font-normal px-2 py-0.5 rounded-full bg-sky-50 text-sky-600 border border-sky-100">イタリア</span>
+                                        </h4>
+                                    </div>
+                                    <p class="text-[12px] text-gray-600 leading-relaxed">地中海の太陽と海風。ナポリの明るく豊かな歌唱と抒情詩が織りなす大衆歌曲の伝統。</p>
                                 </div>
                             </div>
                         </a>
@@ -325,11 +299,10 @@
                     お使いのブラウザはオーディオ再生に対応していません。
                 </audio>
 
-                <!-- AI Insight 表示エリア (プレーヤー直下配置) -->
+                <!-- AI Insight 表示エリア -->
                 <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-6 md:p-8 bg-purple-600 text-white shadow-xl shadow-purple-200/40 border border-purple-500 transition-all duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/40">
                         <div class="flex items-center space-x-3">
-                            <!-- 再生 / 一時停止 ボタン -->
                             <button id="ai-play-btn" onclick="togglePlayPause()" class="w-12 h-12 rounded-full bg-white text-purple-600 flex items-center justify-center shadow-lg hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
                                 <svg id="ai-play-icon" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                             </button>
@@ -339,9 +312,6 @@
                             </div>
                         </div>
                         <div class="flex items-center space-x-1.5 self-start sm:self-auto bg-purple-700/50 px-3 py-1.5 rounded-full border border-purple-400/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                            </svg>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-purple-100">AI MUSICOLOGIST INSIGHT</span>
                         </div>
                     </div>
@@ -353,81 +323,34 @@
                     <!-- カテゴリー: 演歌 -->
                     <div id="cat-enka" class="p-4 rounded-2xl bg-rose-50/60 border border-rose-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-rose-200/60">
-                            <div class="w-7 h-7 rounded-md bg-rose-100/80 border border-rose-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-rose-100/80 border border-rose-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-rose-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="32" cy="22" r="14" fill="#FDA4AF" fill-opacity="0.4"/>
                                     <circle cx="32" cy="22" r="10" fill="#F43F5E" fill-opacity="0.8"/>
                                     <path d="M12 50L26 30L34 38L44 26L52 50H12Z" fill="#881337"/>
-                                    <path d="M26 30L29 34.5L26 36L22.5 35L26 30Z" fill="#FFF"/>
-                                    <path d="M44 26L46.5 30.5L44 32L41.5 30.5L44 26Z" fill="#FFF"/>
-                                    <path d="M48 16C48 16 50 12 53 14C56 16 52 19 48 16Z" fill="#E11D48"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-rose-900 tracking-wider">演歌</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-rose-900 tracking-wider">演歌</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-rose-100/80 text-rose-700 border border-rose-200">日本</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <!-- 演歌 1 -->
-                            <div onclick="playTrack('./music-minamijyuji.mp3', '南十字星ひとり旅', 'AI分析：異国の夜空を仰ぐ深い旅情と孤独。情緒的な旋律の中に潜む、切ない感情の揺らぎと祈りの響きを解析。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">南十字星ひとり旅</h4>
-                                            <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-minamijyuji</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-minamijyuji.mp3', '南十字星ひとり旅', 'AI分析：異国の夜空を仰ぐ深い旅情と孤独。情緒的な旋律の中に潜む切ない感情を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">南十字星ひとり旅</h4>
+                                <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-minamijyuji</p>
                             </div>
-
-                            <!-- 演歌 2 -->
-                            <div onclick="playTrack('./music-komorojyoukoiuta.mp3', '小諸城恋歌', 'AI分析：信州・小諸の古城下を舞台にした情緒。和音階の切なさと、時を越えて響く情感豊かな構成を解析。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">小諸城恋歌</h4>
-                                            <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-komorojyoukoiuta</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-komorojyoukoiuta.mp3', '小諸城恋歌', 'AI分析：信州・小諸の古城下を舞台にした情緒。和音階の切なさと情感豊かな構成を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">小諸城恋歌</h4>
+                                <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-komorojyoukoiuta</p>
                             </div>
-
-                            <!-- 演歌 3 -->
-                            <div onclick="playTrack('./boukyo_onabushi.mp3', '望郷おんな節', 'AI分析：故郷への強い情愛と女心の切なさを歌い上げる情緒。豊かなこぶしの波形と和音階の繊細な音色変化を解析。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">望郷おんな節</h4>
-                                            <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • boukyo_onabushi</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./boukyo_onabushi.mp3', '望郷おんな節', 'AI分析：故郷への強い情愛と女心の切なさを歌い上げる情緒。豊かなこぶしの波形を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">望郷おんな節</h4>
+                                <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • boukyo_onabushi</p>
                             </div>
-
-                            <!-- 演歌 4 -->
-                            <div onclick="playTrack('./ipon_no_michi.mp3', '一本の道', 'AI分析：人生の決意とまっすぐな情熱を込めた旋律。重厚なメロディラインと意志の強さを可視化。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">一本の道</h4>
-                                            <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • ipon_no_michi</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./ipon_no_michi.mp3', '一本の道', 'AI分析：人生の決意とまっすぐな情熱を込めた旋律。重厚なメロディラインを可視化。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">一本の道</h4>
+                                <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • ipon_no_michi</p>
                             </div>
                         </div>
                     </div>
@@ -435,34 +358,21 @@
                     <!-- カテゴリー: 民謡 -->
                     <div id="cat-minyo" class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-amber-200/60">
-                            <div class="w-7 h-7 rounded-md bg-amber-100/80 border border-amber-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-amber-100/80 border border-amber-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-amber-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 40C10 32 54 32 54 40C54 48 10 48 10 40Z" fill="#D97706" stroke="#92400E" stroke-width="2"/>
-                                    <ellipse cx="32" cy="26" rx="22" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
-                                    <path d="M10 26V40C10 46 54 46 54 40V26" fill="none" stroke="#B45309" stroke-width="2"/>
-                                    <circle cx="20" cy="33" r="1.5" fill="#78350F"/>
-                                    <circle cx="32" cy="35" r="1.5" fill="#78350F"/>
-                                    <circle cx="44" cy="33" r="1.5" fill="#78350F"/>
-                                    <line x1="16" y1="12" x2="26" y2="24" stroke="#92400E" stroke-width="3" stroke-linecap="round"/>
-                                    <line x1="48" y1="12" x2="38" y2="24" stroke="#92400E" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M10 40C10 32 54 32 54 40C54 48 10 48 10 40Z" fill="#D97706"/>
+                                    <ellipse cx="32" cy="26" rx="22" ry="10" fill="#FEF3C7"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-amber-900 tracking-wider">民謡</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-amber-900 tracking-wider">民謡</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100/80 text-amber-800 border border-amber-200">伝統風土</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-mogami.mp3', '最上・船頭魂', 'AI分析：最上川の厳しい流れと共存する船頭の不屈の精神。力強い発声と伝統的なリズム構成を可視化。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-amber-100/80 hover:border-amber-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-amber-100/80 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">最上・船頭魂</h4>
-                                            <p class="text-[10px] text-amber-500 font-semibold uppercase mt-0.5">民謡 • music-mogami</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-mogami.mp3', '最上・船頭魂', 'AI分析：最上川の流れと船頭の不屈の精神。力強い発声と伝統リズムを解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-amber-100/80 hover:border-amber-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">最上・船頭魂</h4>
+                                <p class="text-[10px] text-amber-500 font-semibold uppercase mt-0.5">民謡 • music-mogami</p>
                             </div>
                         </div>
                     </div>
@@ -470,33 +380,24 @@
                     <!-- カテゴリー: ファド -->
                     <div id="cat-fado" class="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-blue-200/60">
-                            <div class="w-7 h-7 rounded-md bg-blue-100/80 border border-blue-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-blue-100/80 border border-blue-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-blue-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 50C20 44 44 56 56 50" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 56C24 50 40 60 52 56" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-                                    <circle cx="36" cy="34" r="13" fill="#1D4ED8" stroke="#60A5FA" stroke-width="2"/>
-                                    <circle cx="36" cy="34" r="5" fill="#EFF6FF"/>
-                                    <line x1="36" y1="21" x2="20" y2="10" stroke="#1E40AF" stroke-width="3" stroke-linecap="round"/>
-                                    <circle cx="18" cy="8" r="3" fill="#2563EB"/>
-                                    <path d="M48 10A8 8 0 0 1 54 22A9 9 0 0 0 48 10Z" fill="#F59E0B"/>
+                                    <circle cx="36" cy="34" r="13" fill="#1D4ED8"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-blue-900 tracking-wider">ファド</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-blue-900 tracking-wider">ファド</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-blue-100/80 text-blue-700 border border-blue-200">ポルトガル</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-As Lágrimas do Tejo.mp3', 'As Lágrimas do Tejo', 'AI分析：宿命を感じさせる哀切な旋律。サウダージを呼び起こす歌声の周波数成分をAIが解析。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-blue-100/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-blue-100/80 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">As Lágrimas do Tejo</h4>
-                                            <p class="text-[10px] text-blue-500 font-semibold uppercase mt-0.5">ファド • music-As Lágrimas do Tejo</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-As Lágrimas do Tejo.mp3', 'As Lágrimas do Tejo', 'AI分析：宿命を感じさせる哀切な旋律。サウダージを呼び起こす歌声を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-blue-100/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">As Lágrimas do Tejo</h4>
+                                <p class="text-[10px] text-blue-500 font-semibold uppercase mt-0.5">ファド • music-As Lágrimas do Tejo</p>
+                            </div>
+                            <div onclick="playTrack('./fad_lisboa_waga_ai.mp3', 'リスボン我が愛', 'AI分析：哀愁を帯びたリスボンの路地裏とポルトガル・ギターの調べ。郷愁（サウダージ）溢れる伝統的なファドの旋律を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-blue-100/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">リスボン我が愛</h4>
+                                <p class="text-[10px] text-blue-500 font-semibold uppercase mt-0.5">ファド • fad_lisboa_waga_ai</p>
                             </div>
                         </div>
                     </div>
@@ -504,33 +405,24 @@
                     <!-- カテゴリー: フラメンコ -->
                     <div id="cat-flamenco" class="p-4 rounded-2xl bg-red-50/60 border border-red-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-red-200/60">
-                            <div class="w-7 h-7 rounded-md bg-red-100/80 border border-red-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-red-100/80 border border-red-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-red-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 48C24 32 40 30 48 48C38 56 26 56 16 48Z" fill="#DC2626"/>
-                                    <path d="M22 52C28 40 38 38 44 52C36 58 28 57 22 52Z" fill="#EF4444"/>
-                                    <circle cx="32" cy="22" r="8" fill="#B91C1C"/>
-                                    <path d="M28 20C28 17.5 30 16 32 16C34 16 36 17.5 36 20C36 22 32 25 32 25C32 25 28 22 28 20Z" fill="#F87171"/>
-                                    <circle cx="32" cy="20" r="3" fill="#FFF"/>
-                                    <path d="M12 24L20 18" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M52 24L44 18" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 48C24 32 40 30 48 48Z" fill="#DC2626"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-red-900 tracking-wider">フラメンコ</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-red-900 tracking-wider">フラメンコ</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-red-100/80 text-red-700 border border-red-200">スペイン</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-cante.mp3', 'Cante de la Luna Roja（赤い月のカンテ）', 'AI分析：深淵から湧き上がる情熱的な歌声。カンテの本質である「深い叫び」をAIが多角的に解析。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-red-100/80 hover:border-red-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-red-100/80 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">Cante de la Luna Roja</h4>
-                                            <p class="text-[10px] text-red-500 font-semibold uppercase mt-0.5">フラメンコ • music-cante</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-cante.mp3', 'Cante de la Luna Roja', 'AI分析：深淵から湧き上がる情熱的な歌声。カンテの本質「深い叫び」を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-red-100/80 hover:border-red-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Cante de la Luna Roja</h4>
+                                <p class="text-[10px] text-red-500 font-semibold uppercase mt-0.5">フラメンコ • music-cante</p>
+                            </div>
+                            <div onclick="playTrack('./framenco_akai_tukino_kante.mp3', '赤い月のカンテ', 'AI分析：情熱的なカンテの歌声とギターの調べ。カンテの深い叫びとスペイン伝統の鋭い旋律を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-red-100/80 hover:border-red-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">赤い月のカンテ</h4>
+                                <p class="text-[10px] text-red-500 font-semibold uppercase mt-0.5">フラメンコ • framenco_akai_tukino_kante</p>
                             </div>
                         </div>
                     </div>
@@ -538,33 +430,24 @@
                     <!-- カテゴリー: シャンソン -->
                     <div id="cat-chanson" class="p-4 rounded-2xl bg-pink-50/60 border border-pink-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-pink-200/60">
-                            <div class="w-7 h-7 rounded-md bg-pink-100/80 border border-pink-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-pink-100/80 border border-pink-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-pink-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 10L24 50H40L32 10Z" fill="none" stroke="#DB2777" stroke-width="2"/>
-                                    <line x1="28" y1="30" x2="36" y2="30" stroke="#DB2777" stroke-width="2"/>
-                                    <line x1="26" y1="40" x2="38" y2="40" stroke="#DB2777" stroke-width="2"/>
-                                    <path d="M32 6V10" stroke="#D97706" stroke-width="2"/>
-                                    <circle cx="16" cy="24" r="3" fill="#EC4899"/>
-                                    <path d="M19 24V14L28 12V22" stroke="#EC4899" stroke-width="2" stroke-linecap="round"/>
-                                    <circle cx="25" cy="22" r="3" fill="#EC4899"/>
+                                    <circle cx="16" cy="24" r="5" fill="#EC4899"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-pink-900 tracking-wider">シャンソン</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-pink-900 tracking-wider">シャンソン</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-pink-100/80 text-pink-700 border border-pink-200">フランス</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-Paris, mon amour.mp3', 'Paris, mon amour', 'AI分析：パリの石畳を想起させるドラマチックな物語性。日常の愛おしさを表現する歌唱技法を抽出。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-pink-100/80 hover:border-pink-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-pink-100/80 flex items-center justify-center text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">Paris, mon amour</h4>
-                                            <p class="text-[10px] text-pink-500 font-semibold uppercase mt-0.5">シャンソン • music-Paris, mon amour</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-Paris, mon amour.mp3', 'Paris, mon amour', 'AI分析：パリの石畳を想起させるドラマチックな物語性と歌唱技法を抽出。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-pink-100/80 hover:border-pink-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Paris, mon amour</h4>
+                                <p class="text-[10px] text-pink-500 font-semibold uppercase mt-0.5">シャンソン • music-Paris, mon amour</p>
+                            </div>
+                            <div onclick="playTrack('./shanson_pari_wagaai.mp3', 'パリよ我が愛', 'AI分析：パリのノスタルジックな情景と情緒あふれるストーリーテリング。フランス大衆歌謡の伝統的な歌唱技法とアコーディオンの抒情を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-pink-100/80 hover:border-pink-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">パリよ我が愛</h4>
+                                <p class="text-[10px] text-pink-500 font-semibold uppercase mt-0.5">シャンソン • shanson_pari_wagaai</p>
                             </div>
                         </div>
                     </div>
@@ -572,32 +455,24 @@
                     <!-- カテゴリー: ジャズ -->
                     <div id="cat-jazz" class="p-4 rounded-2xl bg-violet-50/60 border border-violet-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-violet-200/60">
-                            <div class="w-7 h-7 rounded-md bg-purple-100/80 border border-purple-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-purple-100/80 border border-purple-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-purple-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 12V36C22 44 28 50 36 50C44 50 48 44 48 38V34" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M44 32L52 26V40L44 34V32Z" fill="#DDD6FE" stroke="#6D28D9" stroke-width="1.5"/>
-                                    <circle cx="22" cy="14" r="3" fill="#6D28D9"/>
-                                    <path d="M12 28C16 20 28 22 28 14" stroke="#DB2777" stroke-width="2" stroke-dasharray="2 2" stroke-linecap="round"/>
-                                    <circle cx="36" cy="22" r="2" fill="#8B5CF6"/>
-                                    <circle cx="40" cy="16" r="1.5" fill="#8B5CF6"/>
+                                    <path d="M22 12V36C22 44 28 50 36 50" fill="none" stroke="#7C3AED" stroke-width="3"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-violet-900 tracking-wider">ジャズ</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-violet-900 tracking-wider">ジャズ</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-violet-100/80 text-violet-700 border border-violet-200">アメリカ</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-Melody of Dawn.mp3', 'Melody of Dawn', 'AI分析：夜明けの自由と孤独。即興演奏がもたらす予測不能な展開と洗練された音楽理論の融合。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-violet-100/80 hover:border-violet-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-violet-100/80 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">Melody of Dawn</h4>
-                                            <p class="text-[10px] text-violet-500 font-semibold uppercase mt-0.5">ジャズ • music-Melody of Dawn</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-Melody of Dawn.mp3', 'Melody of Dawn', 'AI分析：夜明けの自由と孤独。即興演奏がもたらす予測不能な展開を可視化。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-violet-100/80 hover:border-violet-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Melody of Dawn</h4>
+                                <p class="text-[10px] text-violet-500 font-semibold uppercase mt-0.5">ジャズ • music-Melody of Dawn</p>
+                            </div>
+                            <div onclick="playTrack('./jyazu_yoake_merodi.mp3', '夜明けのメロディー', 'AI分析：夜明けの静寂と光を写し出す繊細なスイング。即興演奏が紡ぐアーバンな情緒とハーモニーの広がりを解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-violet-100/80 hover:border-violet-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">夜明けのメロディー</h4>
+                                <p class="text-[10px] text-violet-500 font-semibold uppercase mt-0.5">ジャズ • jyazu_yoake_merodi</p>
                             </div>
                         </div>
                     </div>
@@ -605,33 +480,50 @@
                     <!-- カテゴリー: タンゴ -->
                     <div id="cat-tango" class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-emerald-200/60">
-                            <div class="w-7 h-7 rounded-md bg-emerald-100/80 border border-emerald-200/80 flex items-center justify-center shrink-0 shadow-sm">
+                            <div class="w-7 h-7 rounded-md bg-emerald-100/80 border border-emerald-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
                                 <svg class="w-4 h-4 text-emerald-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 20L20 14L28 20L36 14L44 20L52 14V44L44 50L36 44L28 50L20 44L12 50V20Z" fill="#047857" stroke="#059669" stroke-width="2"/>
-                                    <line x1="20" y1="14" x2="20" y2="44" stroke="#A7F3D0" stroke-width="1.5"/>
-                                    <line x1="28" y1="20" x2="28" y2="50" stroke="#A7F3D0" stroke-width="1.5"/>
-                                    <line x1="36" y1="14" x2="36" y2="44" stroke="#A7F3D0" stroke-width="1.5"/>
-                                    <line x1="44" y1="20" x2="44" y2="50" stroke="#A7F3D0" stroke-width="1.5"/>
-                                    <circle cx="8" cy="32" r="3" fill="#10B981"/>
-                                    <circle cx="56" cy="32" r="3" fill="#10B981"/>
+                                    <path d="M12 20L20 14L28 20L36 14L44 20L52 14V44H12V20Z" fill="#047857"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xs font-black text-emerald-900 tracking-wider">タンゴ</h3>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-emerald-900 tracking-wider">タンゴ</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100/80 text-emerald-800 border border-emerald-200">アルゼンチン</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./music-Niebla Nocturna.mp3', 'Niebla Nocturna en Buenos Aires', 'AI分析：夜霧のブエノスアイレス。鋭いアクセントとバンドネオンの咽び泣きが織りなす情熱。', this)" 
-                                 class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-emerald-100/80 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-300">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded-full bg-emerald-100/80 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6V11.114A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" /></svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-bold text-gray-800">Niebla Nocturna</h4>
-                                            <p class="text-[10px] text-emerald-600 font-semibold uppercase mt-0.5">タンゴ • music-Niebla Nocturna</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div onclick="playTrack('./music-Niebla Nocturna.mp3', 'Niebla Nocturna', 'AI分析：夜霧のブエノスアイレス。鋭いアクセントとバンドネオンの旋律を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-emerald-100/80 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Niebla Nocturna</h4>
+                                <p class="text-[10px] text-emerald-600 font-semibold uppercase mt-0.5">タンゴ • music-Niebla Nocturna</p>
+                            </div>
+                            <div onclick="playTrack('./tango_yogiri_bueno.mp3', '夜霧のブエノスアイレス', 'AI分析：ブエノスアイレスの夜霧とバンドネオンの哀愁。アルゼンチン・タンゴ独特の切れ味と情熱的な旋律を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-emerald-100/80 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">夜霧のブエノスアイレス</h4>
+                                <p class="text-[10px] text-emerald-600 font-semibold uppercase mt-0.5">タンゴ • tango_yogiri_bueno</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カテゴリー: カンツオーネ (新規追加) -->
+                    <div id="cat-canzone" class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-3 scroll-mt-6">
+                        <div class="flex items-center space-x-2.5 pb-2.5 border-b border-sky-200/60">
+                            <div class="w-7 h-7 rounded-md bg-sky-100/80 border border-sky-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+                                <svg class="w-4 h-4 text-sky-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="32" cy="20" r="10" fill="#38BDF8" fill-opacity="0.6"/>
+                                    <path d="M16 48C24 38 40 38 48 48" stroke="#0284C7" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-sky-900 tracking-wider">カンツオーネ</h3>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-sky-100/80 text-sky-700 border border-sky-200">イタリア</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div onclick="playTrack('./muisc_napoli_1.mp3', 'Abbracciato dal Vento di Napoli', 'AI分析：地中海の青い海とナポリの風を感じさせる伸びやかな歌声。抒情豊かなカンツオーネの歌唱技法を多角的に解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Abbracciato dal Vento di Napoli</h4>
+                                <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • muisc_napoli_1</p>
+                            </div>
+                            <div onclick="playTrack('./music_napori_2.mp3', '風のナポリに抱かれて', 'AI分析：ナポリの心地よい風と陽光を彷彿とさせる和やかなメロディ。豊かな音域の響きと情熱的な展開を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">風のナポリに抱かれて</h4>
+                                <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • music_napori_2</p>
                             </div>
                         </div>
                     </div>
@@ -641,11 +533,9 @@
 
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
-                
                 <div class="relative w-32 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-inner">
                     <img id="curator-image" src="./aikon-sita1.png" alt="デジタル資料館" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerHTML='<svg class=\'w-12 h-12 text-gray-300\' fill=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\'/></svg>'">
                 </div>
-
                 <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>
                 <p class="text-sm text-purple-600 font-bold mb-4">AI音楽解析・文化アーカイブ担当</p>
                 <a href="mailto:yoshi0213@gmail.com" class="text-xs text-gray-400 font-mono bg-gray-50 py-2 rounded-lg inline-block px-4 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300">
@@ -660,9 +550,6 @@
     </div>
 
     <script>
-        /**
-         * 楽曲再生とAI Insightパネルの更新処理
-         */
         function playTrack(url, title, insight, element) {
             const audio = document.getElementById('main-audio');
             const indicator = document.getElementById('playing-indicator');
@@ -671,13 +558,9 @@
             const aiTrackTitle = document.getElementById('ai-track-title');
             const aiStatusGuide = document.getElementById('ai-status-guide');
 
-            // すべての楽曲要素からアクティブスタイルを取り除く
             document.querySelectorAll('#playlist .group').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
-            
-            // 選択された要素にアクティブスタイルを付与
             element.classList.add('track-active', 'bg-white', 'shadow-md');
 
-            // オーディオの読み込みと再生
             audio.src = url;
             indicator.innerText = "読込中...";
             aiTrackTitle.innerText = title;
@@ -693,17 +576,11 @@
                 updatePlayStateUI(false);
             });
 
-            // AI Insightパネルの表示更新
             insightPanel.classList.remove('hidden');
             insightText.innerText = insight;
-
-            // スクロールなしでプレイヤーとAI解説がしっかり収まるようスムーズ移動
             insightPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        /**
-         * 再生 / 一時停止のトグル切り替え
-         */
         function togglePlayPause() {
             const audio = document.getElementById('main-audio');
             if (!audio.src) return;
@@ -716,9 +593,6 @@
             }
         }
 
-        /**
-         * 再生状態に応じたUI（ボタンアイコンと案内テキスト）の更新
-         */
         function updatePlayStateUI(isPlaying) {
             const playIcon = document.getElementById('ai-play-icon');
             const statusGuide = document.getElementById('ai-status-guide');
@@ -726,19 +600,16 @@
             const trackTitle = document.getElementById('ai-track-title').innerText;
 
             if (isPlaying) {
-                // 一時停止アイコン (Pause)
                 playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
                 statusGuide.innerText = "🎵 楽曲を再生中（クリックで一時停止）";
                 if (indicator) indicator.innerText = "再生中: " + trackTitle;
             } else {
-                // 再生アイコン (Play)
                 playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
                 statusGuide.innerText = "▶ ボタンを押すと再生を再開できます";
                 if (indicator) indicator.innerText = "一時停止中";
             }
         }
 
-        // オーディオイベントのリスナー設定
         document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('main-audio');
             if (audio) {
