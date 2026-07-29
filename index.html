@@ -324,16 +324,12 @@
                                 <span id="ai-status-guide" class="text-xs text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-2 self-start sm:self-auto bg-purple-900/50 px-3 py-1.5 rounded-full border border-purple-400/30 shadow-inner">
-                            <span class="text-[9px] font-black uppercase tracking-widest text-purple-200 mr-1">AI CULTURAL INSIGHT</span>
-                            <!-- 3フェーズ切替ボタン -->
-                            <button onclick="selectInsightPhase(0)" id="phase-btn-0" class="w-6 h-6 text-[10px] font-bold rounded-full transition-all flex items-center justify-center bg-white text-purple-700 shadow-sm">1</button>
-                            <button onclick="selectInsightPhase(1)" id="phase-btn-1" class="w-6 h-6 text-[10px] font-bold rounded-full transition-all flex items-center justify-center bg-purple-800/80 text-purple-200 hover:bg-purple-700">2</button>
-                            <button onclick="selectInsightPhase(2)" id="phase-btn-2" class="w-6 h-6 text-[10px] font-bold rounded-full transition-all flex items-center justify-center bg-purple-800/80 text-purple-200 hover:bg-purple-700">3</button>
+                        <div class="flex items-center bg-purple-900/50 px-3.5 py-1.5 rounded-full border border-purple-400/30 shadow-inner self-start sm:self-auto">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
                         </div>
                     </div>
-                    <div class="min-h-[60px] flex items-center">
-                        <p id="ai-insight-text" class="text-xs md:text-sm leading-relaxed font-medium text-purple-50 insight-text-anim"></p>
+                    <div class="min-h-[70px] flex items-center">
+                        <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50 insight-text-anim"></p>
                     </div>
                 </div>
 
@@ -356,36 +352,36 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-minamijyuji.mp3', '南十字星ひとり旅', [
-                                '【1.風土と情緒】寒風や夜霧の情景を描くマイナー旋律。感情にあからさまに出さず胸に秘める、日本人の奥ゆかしさと旅愁が静かに立ち昇ります。',
-                                '【2.国民性と技法】言葉の語尾に宿る「こぶし」の揺らぎ。言葉にできない未練や郷愁を、耐え忍ぶ美徳と共に表現する日本の魂の動き。',
-                                '【3.景観と昇華】ヨナ抜き音階が彩る北国の港町や遠い空の情景。静寂（間）の中に宿る深い情愛が、旅路の果ての希望へ繋がります。'
+                                '寒風や夜霧の情景を描くマイナー旋律。感情にあからさまに出さず胸に秘める、日本人の奥ゆかしさと旅愁が静かに立ち昇ります。',
+                                '言葉の語尾に宿る「こぶし」の揺らぎ。言葉にできない未練や郷愁を、耐え忍ぶ美徳と共に表現する日本の魂の動き。',
+                                'ヨナ抜き音階が彩る北国の港町や遠い空の情景。静寂（間）の中に宿る深い情愛が、旅路の果ての希望へ繋がります。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">南十字星ひとり旅</h4>
                                 <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-minamijyuji</p>
                             </div>
 
                             <div onclick="playTrack('./music-komorojyoukoiuta.mp3', '小諸城恋歌', [
-                                '【1.風土と情緒】城下町の古き良き日本の風情を思わせるイントロ。四季の移ろいを慈しむ日本人の繊細な美意識が聴き手を包みます。',
-                                '【2.国民性と技法】絶妙な「タメ」と息遣い。感情を軽々しく露わにせず心の中で噛み締める、大人の静かな恋愛美学。',
-                                '【3.景観と昇華】信州の山並みや古城に響き渡るようなサビ。自然と一体となって生きる日本人の情緒豊かな心が昇華されます。'
+                                '城下町の古き良き日本の風情を思わせるイントロ。四季の移ろいを慈しむ日本人の繊細な美意識が聴き手を包みます。',
+                                '絶妙な「タメ」と息遣い。感情を軽々しく露わにせず心の中で噛み締める、大人の静かな恋愛美学。',
+                                '信州の山並みや古城に響き渡るようなサビ。自然と一体となって生きる日本人の情緒豊かな心が昇華されます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">小諸城恋歌</h4>
                                 <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • music-komorojyoukoiuta</p>
                             </div>
 
                             <div onclick="playTrack('./boukyo_onabushi.mp3', '望郷おんな節', [
-                                '【1.風土と情緒】北国の激しい吹雪と荒波を想起させる和楽器の重厚な音色。厳しい自然環境と対峙してきた日本の力強さ。',
-                                '【2.国民性と技法】力強いビブラートと魂の叫び。故郷を想う切なさを抱えながらも、たくましく生き抜く庶民の不屈の精神。',
-                                '【3.景観と昇華】遠い故郷の家族や情景を想う強い絆。ダイナミックな和のアンサンブルが聴く者の胸に深い郷愁を刻みます。'
+                                '北国の激しい吹雪と荒波を想起させる和楽器の重厚な音色。厳しい自然環境と対峙してきた日本の力強さ。',
+                                '力強いビブラートと魂の叫び。故郷を想う切なさを抱えながらも、たくましく生き抜く庶民の不屈の精神。',
+                                '遠い故郷の家族や情景を想う強い絆。ダイナミックな和のアンサンブルが聴く者の胸に深い郷愁を刻みます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">望郷おんな節</h4>
                                 <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • boukyo_onabushi</p>
                             </div>
 
                             <div onclick="playTrack('./ipon_no_michi.mp3', '一本の道', [
-                                '【1.風土と情緒】凛とした静寂から始まるシンフォニックな旋律。己の決意を静かに固める、日本人の質実剛健な姿勢を描出。',
-                                '【2.国民性と技法】ブレのないまっすぐな歌唱ライン。一歩一歩踏みしめて進む人生の道筋と、耐え忍び前を向く高潔な国民性。',
-                                '【3.景観と昇華】朝靄の向こうに広がる晴れやかな景観。困難を乗り越えた先に広がる未来への希望が、壮大に鳴り響きます。'
+                                '凛とした静寂から始まるシンフォニックな旋律。己の決意を静かに固める、日本人の質実剛健な姿勢を描出。',
+                                'ブレのないまっすぐな歌唱ライン。一歩一歩踏みしめて進む人生の道筋と、耐え忍び前を向く高潔な国民性。',
+                                '朝靄の向こうに広がる晴れやかな景観。困難を乗り越えた先に広がる未来への希望が、壮大に鳴り響きます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-rose-100/80 hover:border-rose-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">一本の道</h4>
                                 <p class="text-[10px] text-rose-400 font-semibold uppercase mt-0.5">演歌 • ipon_no_michi</p>
@@ -409,9 +405,9 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-mogami.mp3', '最上・船頭魂', [
-                                '【1.風土と情緒】最上川の雄大な川流れと力強い和太鼓のアタック。大自然と共に生きてきた日本の労働と風土の原風景。',
-                                '【2.国民性と技法】「ハイハイ」等の掛け声（ハヤシコトバ）。一人ではなく仲間と息を合わせ助け合う「共同体意識」の知恵。',
-                                '【3.景観と昇華】天を突くような船頭の伸びやかな声。荒波や試練を乗り越えてきた日本人の逞しい生命力が解き放たれます。'
+                                '最上川の雄大な川流れと力強い和太鼓のアタック。大自然と共に生きてきた日本の労働と風土の原風景。',
+                                '「ハイハイ」等の掛け声（ハヤシコトバ）。一人ではなく仲間と息を合わせ助け合う「共同体意識」の知恵。',
+                                '天を突くような船頭の伸びやかな声。荒波や試練を乗り越えてきた日本人の逞しい生命力が解き放たれます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-amber-100/80 hover:border-amber-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">最上・船頭魂</h4>
                                 <p class="text-[10px] text-amber-500 font-semibold uppercase mt-0.5">民謡 • music-mogami</p>
@@ -434,18 +430,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-As Lágrimas do Tejo.mp3', 'As Lágrimas do Tejo', [
-                                '【1.風土と情緒】12弦ポルトガル・ギターの煌びやかで切ない高音。大航海時代から海を見つめ続けてきた港町リスボンの風景。',
-                                '【2.国民性と技法】「サウダージ（喪失と愛慕）」を宿した深い歌声。去りゆく者を見送り、寂しさを慈しむポルトガル人の心音。',
-                                '【3.景観と昇華】テージョ川の夕暮れに溶けていく美しいトレモロ。抗えない運命（ファド）を静かに受け入れる凛とした美徳。'
+                                '12弦ポルトガル・ギターの煌びやかで切ない高音。大航海時代から海を見つめ続けてきた港町リスボンの風景。',
+                                '「サウダージ（喪失と愛慕）」を宿した深い歌声。去りゆく者を見送り、寂しさを慈しむポルトガル人の心音。',
+                                'テージョ川の夕暮れに溶けていく美しいトレモロ。抗えない運命（ファド）を静かに受け入れる凛とした美徳。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-blue-100/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">As Lágrimas do Tejo</h4>
                                 <p class="text-[10px] text-blue-500 font-semibold uppercase mt-0.5">ファド • music-As Lágrimas do Tejo</p>
                             </div>
 
                             <div onclick="playTrack('./fad_lisboa_waga_ai.mp3', 'リスボン我が愛', [
-                                '【1.風土と情緒】石畳の急な坂道やタベルナの灯りを想起させる哀愁の伴奏。大衆の暮らしに根差した大航海都市の郷愁。',
-                                '【2.国民性と技法】語りかけるような抒情唱法。遠く離れた故郷や愛する人への情念を、誇り高く静かに噛み締める歌声。',
-                                '【3.景観と昇華】海風に乗って響く余韻豊かな旋律。愛おしさと切なさが交錯するポルトガル伝統の情感が胸を満たします。'
+                                '石畳の急な坂道やタベルナの灯りを想起させる哀愁の伴奏。大衆の暮らしに根差した大航海都市の郷愁。',
+                                '語りかけるような抒情唱法。遠く離れた故郷や愛する人への情念を、誇り高く静かに噛み締める歌声。',
+                                '海風に乗って響く余韻豊かな旋律。愛おしさと切なさが交錯するポルトガル伝統の情感が胸を満たします。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-blue-100/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">リスボン我が愛</h4>
                                 <p class="text-[10px] text-blue-500 font-semibold uppercase mt-0.5">ファド • fad_lisboa_waga_ai</p>
@@ -468,18 +464,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-cante.mp3', 'Cante de la Luna Roja', [
-                                '【1.風土と情緒】アンダルシアの激しい陽光と乾いた大地を感じさせるハスキーな歌声（カンテ）。過酷な歴史が生んだ魂の叫び。',
-                                '【2.国民性と技法】ラスゲアード奏法の鋭い連打と複雑なリズム。喜怒哀楽のすべてを爆発させる、スペイン人の圧倒的情熱。',
-                                '【3.景観と昇華】「デュエンデ（魔的な霊感）」が宿る即興世界。今この瞬間を全力で生き切るという誇り高き美学の到達点。'
+                                'アンダルシアの激しい陽光と乾いた大地を感じさせるハスキーな歌声（カンテ）。過酷な歴史が生んだ魂の叫び。',
+                                'ラスゲアード奏法の鋭い連打と複雑なリズム。喜怒哀楽のすべてを爆発させる、スペイン人の圧倒的情熱。',
+                                '「デュエンデ（魔的な霊感）」が宿る即興世界。今この瞬間を全力で生き切るという誇り高き美学の到達点。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-red-100/80 hover:border-red-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Cante de la Luna Roja</h4>
                                 <p class="text-[10px] text-red-500 font-semibold uppercase mt-0.5">フラメンコ • music-cante</p>
                             </div>
 
                             <div onclick="playTrack('./framenco_akai_tukino_kante.mp3', '赤い月のカンテ', [
-                                '【1.風土と情緒】フリギアン音階が紡ぐ夜の情熱。情熱的な愛と死の影が背中合わせに存在するアンダルシアの風土。',
-                                '【2.国民性と技法】かすれ声の熱唱と手拍子（パルマ）。感情を包み隠さず全開にする、オープンで情熱的な国民性。',
-                                '【3.景観と昇華】ステップ（サパテアード）が大地を打ち鳴らすカタルシス。生きる歓喜と哀愁が燃え上がるフィナーレ。'
+                                'フリギアン音階が紡ぐ夜の情熱。情熱的な愛と死の影が背中合わせに存在するアンダルシアの風土。',
+                                'かすれ声の熱唱と手拍子（パルマ）。感情を包み隠さず全開にする、オープンで情熱的な国民性。',
+                                'ステップ（サパテアード）が大地を打ち鳴らすカタルシス。生きる歓喜と哀愁が燃え上がるフィナーレ。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-red-100/80 hover:border-red-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">赤い月のカンテ</h4>
                                 <p class="text-[10px] text-red-500 font-semibold uppercase mt-0.5">フラメンコ • framenco_akai_tukino_kante</p>
@@ -502,18 +498,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-Paris, mon amour.mp3', 'Paris, mon amour', [
-                                '【1.風土と情緒】セーヌ川の木漏れ日やカフェの喧騒を描くアコーディオン。パリの街角で育まれた日常の美学とエレガンス。',
-                                '【2.国民性と技法】語るように歌う演劇的リアリズム。日常のささやかなドラマや人生の苦みをエスプリ（知性と粋）で捉える歌唱。',
-                                '【3.景観と昇華】華やかさと洗練が交錯する三拍子。人生を謳歌し、自由を愛するフランス人の精神が鮮やかに可視化されます。'
+                                'セーヌ川の木漏れ日やカフェの喧騒を描くアコーディオン。パリの街角で育まれた日常の美学とエレガンス。',
+                                '語るように歌う演劇的リアリズム。日常のささやかなドラマや人生の苦みをエスプリ（知性と粋）で捉える歌唱。',
+                                '華やかさと洗練が交錯する三拍子。人生を謳歌し、自由を愛するフランス人の精神が鮮やかに可視化されます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-pink-100/80 hover:border-pink-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Paris, mon amour</h4>
                                 <p class="text-[10px] text-pink-500 font-semibold uppercase mt-0.5">シャンソン • music-Paris, mon amour</p>
                             </div>
 
                             <div onclick="playTrack('./shanson_pari_wagaai.mp3', 'パリよ我が愛', [
-                                '【1.風土と情緒】ノスタルジックなミュゼットの可憐なメロディ。古い街角の恋と人生の機微を愛でる都市文化の香り。',
-                                '【2.国民性と技法】言葉のニュアンスを繊細に紡ぐボーカル。人間味あふれる愛や孤独を批評的かつ温かく歌い上げる技法。',
-                                '【3.景観と昇華】夕暮れのパリの街並みが目に浮かぶエンディング。大人の洒落気とエスプリに満ちた感動の余韻。'
+                                'ノスタルジックなミュゼットの可憐なメロディ。古い街角の恋と人生の機微を愛でる都市文化の香り。',
+                                '言葉のニュアンスを繊細に紡ぐボーカル。人間味あふれる愛や孤独を批評的かつ温かく歌い上げる技法。',
+                                '夕暮れのパリの街並みが目に浮かぶエンディング。大人の洒落気とエスプリに満ちた感動の余韻。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-pink-100/80 hover:border-pink-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">パリよ我が愛</h4>
                                 <p class="text-[10px] text-pink-500 font-semibold uppercase mt-0.5">シャンソン • shanson_pari_wagaai</p>
@@ -536,18 +532,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-Melody of Dawn.mp3', 'Melody of Dawn', [
-                                '【1.風土と情緒】摩天楼の夜明けを照らすスタイリッシュなピアノ。多様な文化が混ざり合うアメリカ現代都市の静寂と躍動。',
-                                '【2.国民性と技法】即興演奏（インプロヴィゼーション）。既成概念にとらわれず個性を尊重し開拓するフロンティア精神のあらわれ。',
-                                '【3.景観と昇華】互いの音を聴き合い高め合うスウィング。自由への喝采と多様性の美学が洗練されたハーモニーへ結晶。'
+                                '摩天楼の夜明けを照らすスタイリッシュなピアノ。多様な文化が混ざり合うアメリカ現代都市の静寂と躍動。',
+                                '即興演奏（インプロヴィゼーション）。既成概念にとらわれず個性を尊重し開拓するフロンティア精神のあらわれ。',
+                                '互いの音を聴き合い高め合うスウィング。自由への喝采と多様性の美学が洗練されたハーモニーへ結晶。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-violet-100/80 hover:border-violet-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Melody of Dawn</h4>
                                 <p class="text-[10px] text-violet-500 font-semibold uppercase mt-0.5">ジャズ • music-Melody of Dawn</p>
                             </div>
 
                             <div onclick="playTrack('./jyazu_yoake_merodi.mp3', '夜明けのメロディー', [
-                                '【1.風土と情緒】都市の目覚めを爽やかに彩るアコースティックサウンド。自由でポジティブなアメリカのフロンティア精神。',
-                                '【2.国民性と技法】ブルーノート・スケールが描くスリリングな会話。プレイヤーそれぞれの自由な感性が躍動する即興セッション。',
-                                '【3.景観と昇華】個々の才能が調和する見事なエンディング。新しい可能性に挑み続ける都市の開拓者たちの自由な歌。'
+                                '都市の目覚めを爽やかに彩るアコースティックサウンド。自由でポジティブなアメリカのフロンティア精神。',
+                                'ブルーノート・スケールが描くスリリングな会話。プレイヤーそれぞれの自由な感性が躍動する即興セッション。',
+                                '個々の才能が調和する見事なエンディング。新しい可能性に挑み続ける都市の開拓者たちの自由な歌。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-violet-100/80 hover:border-violet-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">夜明けのメロディー</h4>
                                 <p class="text-[10px] text-violet-500 font-semibold uppercase mt-0.5">ジャズ • jyazu_yoake_merodi</p>
@@ -570,18 +566,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music-Niebla Nocturna.mp3', 'Niebla Nocturna', [
-                                '【1.風土と情緒】夜霧のブエノスアイレス港。ヨーロッパからの移民たちが抱えた望郷の孤独と、都会の張りつめた緊張感。',
-                                '【2.国民性と技法】バンドネオンが発する「ため息」とシャープなリズム。孤独を覆い隠すような孤高のプライドと気高さ。',
-                                '【3.景観と昇華】一瞬の隙も見せない密着したステップの躍動。凛として逞しく生きる南米都市の情熱的なリアリズム。'
+                                '夜霧のブエノスアイレス港。ヨーロッパからの移民たちが抱えた望郷の孤独と、都会の張りつめた緊張感。',
+                                'バンドネオンが発する「ため息」とシャープなリズム。孤独を覆い隠すような孤高のプライドと気高さ。',
+                                '一瞬の隙も見せない密着したステップの躍動。凛として逞しく生きる南米都市の情熱的なリアリズム。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-emerald-100/80 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Niebla Nocturna</h4>
                                 <p class="text-[10px] text-emerald-600 font-semibold uppercase mt-0.5">タンゴ • music-Niebla Nocturna</p>
                             </div>
 
                             <div onclick="playTrack('./tango_yogiri_bueno.mp3', '夜霧のブエノスアイレス', [
-                                '【1.風土と情緒】港町の酒場で生まれた切なく鋭いテンポ。異郷の地で孤独を抱えた男たちの切なる詩情。',
-                                '【2.国民性と技法】低音弦の力強い打ち込みとバンドネオンの絡み合い。甘美でありながら切れ味のある気高き表現力。',
-                                '【3.景観と昇華】静と動が目まぐるしく交錯するスリリングな結末。孤高の美学を貫くアルゼンチン・タンゴの神髄。'
+                                '港町の酒場で生まれた切なく鋭いテンポ。異郷の地で孤独を抱えた男たちの切なる詩情。',
+                                '低音弦の力強い打ち込みとバンドネオンの絡み合い。甘美でありながら切れ味のある気高き表現力。',
+                                '静と動が目まぐるしく交錯するスリリングな結末。孤高の美学を貫くアルゼンチン・タンゴの神髄。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-emerald-100/80 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">夜霧のブエノスアイレス</h4>
                                 <p class="text-[10px] text-emerald-600 font-semibold uppercase mt-0.5">タンゴ • tango_yogiri_bueno</p>
@@ -605,18 +601,18 @@
                         </div>
                         <div class="space-y-2">
                             <div onclick="playTrack('./music_napori_1.mp3', 'Abbracciato dal Vento di Napoli', [
-                                '【1.風土と情緒】ナポリの眩しい太陽と地中海の青い海風。恵まれた気候とオープンな風土から生まれた圧倒的開放感。',
-                                '【2.国民性と技法】「ベルカント唱法」の伸びやかな腹底の響き。隠し事なく愛や歓喜をストレートに歌い上げる陽気な国民性。',
-                                '【3.景観と昇華】マンドリンの可憐なトレモロと太陽のハイトーン。ありのままの人生と郷土を愛するイタリア人のオープンハート。'
+                                'ナポリの眩しい太陽と地中海の青い海風。恵まれた気候とオープンな風土から生まれた圧倒的開放感。',
+                                '「ベルカント唱法」の伸びやかな腹底の響き。隠し事なく愛や歓喜をストレートに歌い上げる陽気な国民性。',
+                                'マンドリンの可憐なトレモロと太陽のハイトーン。ありのままの人生と郷土を愛するイタリア人のオープンハート。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Abbracciato dal Vento di Napoli</h4>
                                 <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • music_napori_1</p>
                             </div>
 
                             <div onclick="playTrack('./music_napori_2.mp3', '風のナポリに抱かれて', [
-                                '【1.風土と情緒】地中海の明るい光と波音を感じさせる抒情メロディ。感情を素直に露わにするイタリア人の豊かな人間味。',
-                                '【2.国民性と技法】ダイナミックな声量とロマンチックな歌唱。愛する人や故郷への感謝を高らかに讃える伸びやかな表現。',
-                                '【3.景観と昇華】聴く者全員を笑顔に包み込む大合奏。太陽の祝福を受けた地中海カンツオーネの幸福なフィナーレ。'
+                                '地中海の明るい光と波音を感じさせる抒情メロディ。感情を素直に露わにするイタリア人の豊かな人間味。',
+                                'ダイナミックな声量とロマンチックな歌唱。愛する人や故郷への感謝を高らかに讃える伸びやかな表現。',
+                                '聴く者全員を笑顔に包み込む大合奏。太陽の祝福を受けた地中海カンツオーネの幸福なフィナーレ。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">風のナポリに抱かれて</h4>
                                 <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • music_napori_2</p>
@@ -704,18 +700,6 @@
             void insightText.offsetWidth; // リフロー発生
             insightText.innerText = currentInsights[currentInsightIndex] || "";
             insightText.classList.add('insight-text-anim');
-
-            // フェーズボタンのアクティブ表示更新
-            [0, 1, 2].forEach(idx => {
-                const btn = document.getElementById('phase-btn-' + idx);
-                if (btn) {
-                    if (idx === currentInsightIndex) {
-                        btn.className = "w-6 h-6 text-[10px] font-black rounded-full transition-all flex items-center justify-center bg-white text-purple-700 shadow-md scale-110";
-                    } else {
-                        btn.className = "w-6 h-6 text-[10px] font-bold rounded-full transition-all flex items-center justify-center bg-purple-900/60 text-purple-200 hover:bg-purple-700";
-                    }
-                }
-            });
         }
 
         function selectInsightPhase(index) {
