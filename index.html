@@ -305,9 +305,12 @@
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">楽曲を選択してください</span>
                 </div>
                 
-                <audio id="main-audio" controls class="w-full h-10 mb-6 focus:outline-none">
-                    お使いのブラウザはオーディオ再生に対応していません。
-                </audio>
+                <!-- 音声プレイヤー (スマホでも再生時間がはっきり見えるデザイン調整) -->
+                <div id="audio-container" class="bg-purple-50/70 p-3 rounded-2xl border border-purple-100 mb-6 shadow-inner">
+                    <audio id="main-audio" controls class="w-full h-10 focus:outline-none">
+                        お使いのブラウザはオーディオ再生に対応していません。
+                    </audio>
+                </div>
 
                 <!-- AI Insight 表示エリア (順次3フェーズ表示) -->
                 <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-5 md:p-7 bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-800 text-white shadow-xl shadow-purple-200/40 border border-purple-400/50 transition-all duration-300">
@@ -683,8 +686,13 @@
             insightPanel.classList.remove('hidden');
             renderCurrentInsight();
             
-            // スムーススクロール
-            insightPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // スマホ画面でも音声プレイヤー（再生時間）とコメント欄が両方見えるようスクロール位置を調整
+            const audioContainer = document.getElementById('audio-container');
+            if (audioContainer) {
+                audioContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                insightPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
 
         function renderCurrentInsight() {
@@ -719,14 +727,14 @@
 
         function startInsightRotation() {
             stopInsightRotation();
-            // 約8秒ごとに次のコメントへ自動切り替え
+            // 約10秒ごとに次のコメントへ自動切り替え
             insightInterval = setInterval(() => {
                 const audio = document.getElementById('main-audio');
                 if (audio && !audio.paused && currentInsights.length > 1) {
                     currentInsightIndex = (currentInsightIndex + 1) % currentInsights.length;
                     renderCurrentInsight();
                 }
-            }, 8000);
+            }, 10000);
         }
 
         function stopInsightRotation() {
