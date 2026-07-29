@@ -264,7 +264,7 @@
                             </div>
                         </a>
 
-                        <!-- 8. カンツオーネ (新規追加) -->
+                        <!-- 8. カンツオーネ -->
                         <a href="#cat-canzone" class="category-card p-5 bg-gradient-to-br from-white via-slate-50/50 to-sky-50/30 rounded-2xl border border-sky-100/60 hover:border-sky-300 transition-all block group shadow-sm">
                             <div class="flex items-start space-x-3.5">
                                 <div class="w-11 h-11 rounded-lg bg-sky-100/80 border border-sky-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
@@ -502,7 +502,7 @@
                         </div>
                     </div>
 
-                    <!-- カテゴリー: カンツオーネ (新規追加) -->
+                    <!-- カテゴリー: カンツオーネ -->
                     <div id="cat-canzone" class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-3 scroll-mt-6">
                         <div class="flex items-center space-x-2.5 pb-2.5 border-b border-sky-200/60">
                             <div class="w-7 h-7 rounded-md bg-sky-100/80 border border-sky-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
@@ -517,9 +517,9 @@
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <div onclick="playTrack('./muisc_napoli_1.mp3', 'Abbracciato dal Vento di Napoli', 'AI分析：地中海の青い海とナポリの風を感じさせる伸びやかな歌声。抒情豊かなカンツオーネの歌唱技法を多角的に解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                            <div onclick="playTrack('./music_napori_1.mp3', 'Abbracciato dal Vento di Napoli', 'AI分析：地中海の燦々たる太陽とナポリの海風を感じさせる開放的な旋律。伸びやかな歌声と情感豊かなベルカント唱法を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">Abbracciato dal Vento di Napoli</h4>
-                                <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • muisc_napoli_1</p>
+                                <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • music_napori_1</p>
                             </div>
                             <div onclick="playTrack('./music_napori_2.mp3', '風のナポリに抱かれて', 'AI分析：ナポリの心地よい風と陽光を彷彿とさせる和やかなメロディ。豊かな音域の響きと情熱的な展開を解析。', this)" class="group cursor-pointer p-4 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">風のナポリに抱かれて</h4>
@@ -558,6 +558,7 @@
             const aiTrackTitle = document.getElementById('ai-track-title');
             const aiStatusGuide = document.getElementById('ai-status-guide');
 
+            // アクティブなトラックのスタイル適用
             document.querySelectorAll('#playlist .group').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
             element.classList.add('track-active', 'bg-white', 'shadow-md');
 
