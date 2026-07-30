@@ -30,7 +30,7 @@
             font-family: 'Noto Serif JP', serif;
             font-weight: 900;
             letter-spacing: -0.01em;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .glass-card {
@@ -98,7 +98,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
                 </span>
-                <span class="text-[10px] font-black text-purple-600 tracking-[0.15em] uppercase">AI Musicology & Cultural Archive v2.5</span>
+                <span class="text-[10px] font-black text-purple-600 tracking-[0.15em] uppercase">AI Musicology & Cultural Archive</span>
             </div>
             
             <div class="space-y-3">
@@ -111,18 +111,28 @@
 
         <div class="space-y-8 fade-in" style="animation-delay: 0.1s;">
             
-            <div class="glass-card rounded-3xl p-6 md:p-8 space-y-8 border border-gray-100">
+            <div class="glass-card rounded-3xl p-6 md:p-8 space-y-6 border border-gray-100 bg-gradient-to-br from-white via-purple-50/20 to-white">
                 <section>
-                    <h2 class="text-xs font-bold text-purple-500 uppercase tracking-[0.3em] mb-2">Archive Overview</h2>
-                    <h3 class="text-lg font-bold mb-3 text-gray-800">アーカイブ概要</h3>
-                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        本デジタルアーカイブは、世界の多様な音楽ジャンルをAI技術で多角的に解析した総合研究室です。楽曲を聴きながら、それぞれの国が歩んだ歴史や気候風土、人々の「国民性」が音色として結実した感動体験をお楽しみください。
-                    </p>
+                    <h2 class="text-xs font-bold text-purple-500 uppercase tracking-[0.3em] mb-3">Archive Overview</h2>
+                    
+                    <!-- アーカイブ概要 タイトル -->
+                    <h3 class="text-base md:text-lg font-bold text-gray-900 leading-snug mb-4 title-serif border-l-4 border-purple-500 pl-3">
+                        AIが創り出す世界の音楽とともに、心で巡る音楽の旅をお楽しみください。
+                    </h3>
+
+                    <!-- アーカイブ概要 本文 -->
+                    <div class="text-xs md:text-sm text-gray-600 leading-relaxed space-y-3">
+                        <p>世界には、それぞれ異なる文化や歴史があり、人々の暮らしがあります。そして、その国ならではの美しい音楽が息づいています。</p>
+                        <p>この「AIで楽しむ世界の音楽」では、世界各国を代表する音楽ジャンルを、AIの技術を活用して制作しました。</p>
+                        <p>音楽には、その国の風景や街並み、人々の笑顔や暮らし、そして心が映し出されています。一曲一曲を聴きながら、その国を旅しているような気分を味わっていただければ幸いです。</p>
+                        <p class="font-semibold text-purple-800 pt-1">さあ、世界への音楽の旅に出かけましょう。</p>
+                        <p>耳を澄ませば、きっとまだ訪れたことのない国々が、あなたを温かく迎えてくれることでしょう。</p>
+                        <p class="italic text-gray-500 pt-1">どうぞ、世界の風景を思い浮かべながら、心ゆくまで音楽をお楽しみください。</p>
+                    </div>
                 </section>
 
                 <hr class="border-gray-100">
 
-                <!-- 各カテゴリーナビゲーション -->
                 <section>
                     <div class="flex items-center justify-between mb-5">
                         <h2 class="text-xs font-bold text-purple-600 uppercase tracking-[0.3em]">Music Categories</h2>
@@ -305,14 +315,14 @@
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">楽曲を選択してください</span>
                 </div>
                 
-                <!-- 音声プレイヤー (スマホでも再生時間がはっきり見えるデザイン調整) -->
+                <!-- 音声プレイヤー（スマホでも再生時間・シークバーが常時見やすい構成） -->
                 <div id="audio-container" class="bg-purple-50/70 p-3 rounded-2xl border border-purple-100 mb-6 shadow-inner">
                     <audio id="main-audio" controls class="w-full h-10 focus:outline-none">
                         お使いのブラウザはオーディオ再生に対応していません。
                     </audio>
                 </div>
 
-                <!-- AI Insight 表示エリア (順次3フェーズ表示) -->
+                <!-- AI Insight 表示エリア (文字サイズを大きくし、余計な見出しを削除) -->
                 <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-5 md:p-7 bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-800 text-white shadow-xl shadow-purple-200/40 border border-purple-400/50 transition-all duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/30">
                         <div class="flex items-center space-x-3">
@@ -324,11 +334,11 @@
                                 <span id="ai-status-guide" class="text-xs text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
                             </div>
                         </div>
-                        <div class="flex items-center bg-purple-900/50 px-3.5 py-1.5 rounded-full border border-purple-400/30 shadow-inner self-start sm:self-auto">
+                        <div class="flex items-center bg-purple-900/50 px-3 py-1 rounded-full border border-purple-400/30 shadow-inner self-start sm:self-auto">
                             <span class="text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
                         </div>
                     </div>
-                    <div class="min-h-[70px] flex items-center">
+                    <div class="min-h-[80px] flex items-center py-2">
                         <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50 insight-text-anim"></p>
                     </div>
                 </div>
@@ -702,13 +712,6 @@
             insightText.classList.add('insight-text-anim');
         }
 
-        function selectInsightPhase(index) {
-            if (index >= 0 && index < currentInsights.length) {
-                currentInsightIndex = index;
-                renderCurrentInsight();
-            }
-        }
-
         function startInsightRotation() {
             stopInsightRotation();
             // 約10秒ごとに次のコメントへ自動切り替え
@@ -752,7 +755,7 @@
 
             if (isPlaying) {
                 playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-                statusGuide.innerText = "🎵 楽曲を再生中（コメントが順次切り替わります）";
+                statusGuide.innerText = "🎵 楽曲を再生中（コメントが約10秒ごとに順次切り替わります）";
                 if (indicator) indicator.innerText = "再生中: " + trackTitle;
             } else {
                 playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
