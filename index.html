@@ -320,28 +320,28 @@
                     
                     <!-- 枠上：カテゴリーのイラスト、カテゴリー名、国名表示 -->
                     <div class="flex items-center justify-between gap-2 pb-3 mb-4 border-b border-purple-400/30">
-                        <div class="flex items-center space-x-2.5">
+                        <div class="flex items-center space-x-2 shrink-0 min-w-0">
                             <!-- イラスト (SVG) -->
                             <div id="ai-cat-icon-container" class="w-8 h-8 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center shrink-0 shadow-sm overflow-hidden p-1.5 text-white">
                                 <!-- JSでイラストが自動挿入されます -->
                             </div>
                             <!-- カテゴリー名 & 国名 -->
-                            <div class="flex items-center gap-2">
-                                <span id="ai-cat-name-text" class="text-sm md:text-base font-black text-white tracking-wide">ジャンル</span>
-                                <span id="ai-country-badge" class="text-[10px] md:text-xs font-bold px-2.5 py-0.5 rounded-full bg-white/20 text-purple-100 border border-white/30">国名</span>
+                            <div class="flex items-center gap-1.5 md:gap-2 shrink-0">
+                                <span id="ai-cat-name-text" class="text-sm md:text-base font-black text-white tracking-wide whitespace-nowrap">ジャンル</span>
+                                <span id="ai-country-badge" class="text-[10px] md:text-xs font-bold px-2.5 py-0.5 rounded-full bg-white/20 text-purple-100 border border-white/30 whitespace-nowrap shrink-0">国名</span>
                             </div>
                         </div>
                         
-                        <div class="flex items-center bg-purple-900/50 px-3 py-1 rounded-full border border-purple-400/30 shadow-inner">
-                            <span class="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
+                        <div class="flex items-center bg-purple-900/50 px-2.5 md:px-3 py-1 rounded-full border border-purple-400/30 shadow-inner shrink-0 whitespace-nowrap">
+                            <span class="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
                         </div>
                     </div>
 
                     <!-- 楽曲情報 & 再生ボタン -->
                     <div class="flex items-center justify-between gap-3 mb-3">
-                        <div>
-                            <span id="ai-track-title" class="text-base md:text-lg font-black text-amber-300 block">楽曲名</span>
-                            <span id="ai-status-guide" class="text-[11px] text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
+                        <div class="min-w-0 flex-1">
+                            <span id="ai-track-title" class="text-base md:text-lg font-black text-amber-300 block truncate">楽曲名</span>
+                            <span id="ai-status-guide" class="text-[10px] md:text-[11px] text-purple-200 font-medium block leading-snug">▶ ボタンを押すと再生を開始できます</span>
                         </div>
                         <button id="ai-play-btn" onclick="togglePlayPause()" class="w-10 h-10 rounded-full bg-white text-purple-700 flex items-center justify-center shadow-md hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
                             <svg id="ai-play-icon" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -733,8 +733,11 @@
                 updatePlayStateUI(false);
             });
 
-            // 再生画面枠が見える位置へスムーススクロール
-            if (insightPanel) {
+            // 再生画面枠およびプレイヤーが見える位置へスクロール
+            const audioContainer = document.getElementById('audio-container');
+            if (audioContainer) {
+                audioContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else if (insightPanel) {
                 insightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
