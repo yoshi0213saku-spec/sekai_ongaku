@@ -314,33 +314,51 @@
                     <span class="text-xs font-bold text-purple-600 uppercase tracking-widest">Digital Archive Audio</span>
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">楽曲を選択してください</span>
                 </div>
-                
-                <!-- 音声プレイヤー（スマホでも再生時間・シークバーが常時見やすい構成） -->
-                <div id="audio-container" class="bg-purple-50/70 p-3 rounded-2xl border border-purple-100 mb-6 shadow-inner">
+
+                <!-- AI Insight 表示エリア（再生画面の枠） -->
+                <div id="ai-insight-panel" class="hidden mb-4 glass-card rounded-3xl p-5 md:p-7 bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-800 text-white shadow-xl shadow-purple-200/40 border border-purple-400/50 transition-all duration-300">
+                    
+                    <!-- 枠上：カテゴリーのイラスト、カテゴリー名、国名表示 -->
+                    <div class="flex items-center justify-between gap-2 pb-3 mb-4 border-b border-purple-400/30">
+                        <div class="flex items-center space-x-2.5">
+                            <!-- イラスト (SVG) -->
+                            <div id="ai-cat-icon-container" class="w-8 h-8 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center shrink-0 shadow-sm overflow-hidden p-1.5 text-white">
+                                <!-- JSでイラストが自動挿入されます -->
+                            </div>
+                            <!-- カテゴリー名 & 国名 -->
+                            <div class="flex items-center gap-2">
+                                <span id="ai-cat-name-text" class="text-sm md:text-base font-black text-white tracking-wide">ジャンル</span>
+                                <span id="ai-country-badge" class="text-[10px] md:text-xs font-bold px-2.5 py-0.5 rounded-full bg-white/20 text-purple-100 border border-white/30">国名</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-purple-900/50 px-3 py-1 rounded-full border border-purple-400/30 shadow-inner">
+                            <span class="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
+                        </div>
+                    </div>
+
+                    <!-- 楽曲情報 & 再生ボタン -->
+                    <div class="flex items-center justify-between gap-3 mb-3">
+                        <div>
+                            <span id="ai-track-title" class="text-base md:text-lg font-black text-amber-300 block">楽曲名</span>
+                            <span id="ai-status-guide" class="text-[11px] text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
+                        </div>
+                        <button id="ai-play-btn" onclick="togglePlayPause()" class="w-10 h-10 rounded-full bg-white text-purple-700 flex items-center justify-center shadow-md hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
+                            <svg id="ai-play-icon" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- コメント文章表示エリア -->
+                    <div class="min-h-[70px] flex items-center py-2.5 px-4 bg-purple-900/40 rounded-2xl border border-purple-400/20">
+                        <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50 insight-text-anim"></p>
+                    </div>
+                </div>
+
+                <!-- 枠下：音声プレイヤー（再生時間・シークバー） -->
+                <div id="audio-container" class="bg-purple-50/80 p-3 rounded-2xl border border-purple-200 mb-8 shadow-inner">
                     <audio id="main-audio" controls class="w-full h-10 focus:outline-none">
                         お使いのブラウザはオーディオ再生に対応していません。
                     </audio>
-                </div>
-
-                <!-- AI Insight 表示エリア (文字サイズを大きくし、余計な見出しを削除) -->
-                <div id="ai-insight-panel" class="hidden mb-8 glass-card rounded-3xl p-5 md:p-7 bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-800 text-white shadow-xl shadow-purple-200/40 border border-purple-400/50 transition-all duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-purple-400/30">
-                        <div class="flex items-center space-x-3">
-                            <button id="ai-play-btn" onclick="togglePlayPause()" class="w-11 h-11 rounded-full bg-white text-purple-700 flex items-center justify-center shadow-md hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all shrink-0">
-                                <svg id="ai-play-icon" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                            </button>
-                            <div>
-                                <span id="ai-track-title" class="text-sm font-black text-white block">楽曲を選択中</span>
-                                <span id="ai-status-guide" class="text-xs text-purple-200 font-medium">▶ ボタンを押すと再生を開始できます</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center bg-purple-900/50 px-3 py-1 rounded-full border border-purple-400/30 shadow-inner self-start sm:self-auto">
-                            <span class="text-[10px] font-black uppercase tracking-widest text-purple-200">AI CULTURAL INSIGHT</span>
-                        </div>
-                    </div>
-                    <div class="min-h-[80px] flex items-center py-2">
-                        <p id="ai-insight-text" class="text-sm md:text-base leading-relaxed font-medium text-purple-50 insight-text-anim"></p>
-                    </div>
                 </div>
 
                 <div class="space-y-6" id="playlist">
@@ -663,11 +681,61 @@
             const aiTrackTitle = document.getElementById('ai-track-title');
             const aiStatusGuide = document.getElementById('ai-status-guide');
 
+            // カテゴリー情報の取得と反映（イラスト、カテゴリー名、国名）
+            if (element) {
+                const catCard = element.closest('[id^="cat-"]');
+                if (catCard) {
+                    const svgIcon = catCard.querySelector('svg');
+                    const catName = catCard.querySelector('h3');
+                    const countryName = catCard.querySelector('span');
+
+                    const iconContainer = document.getElementById('ai-cat-icon-container');
+                    const catNameText = document.getElementById('ai-cat-name-text');
+                    const countryBadge = document.getElementById('ai-country-badge');
+
+                    if (svgIcon && iconContainer) {
+                        iconContainer.innerHTML = svgIcon.outerHTML;
+                        // アイコンの色を白系統に統一調整
+                        const copiedSvg = iconContainer.querySelector('svg');
+                        if (copiedSvg) copiedSvg.className.baseVal = "w-5 h-5 text-white";
+                    }
+                    if (catName && catNameText) catNameText.innerText = catName.innerText;
+                    if (countryName && countryBadge) countryBadge.innerText = countryName.innerText;
+                }
+            }
+
             // アクティブなトラックのスタイル適用
             document.querySelectorAll('#playlist .group').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
             if (element) {
                 element.classList.add('track-active', 'bg-white', 'shadow-md');
             }
+
+            // インサイトデータの設定（配列で保持）
+            currentInsights = Array.isArray(insights) ? insights : [insights];
+            currentInsightIndex = 0;
+
+            audio.src = url;
+            indicator.innerText = "読込中...";
+            aiTrackTitle.innerText = title;
+            aiStatusGuide.innerText = "読み込み中...";
+            
+            audio.play().then(() => {
+                indicator.innerText = "再生中: " + title;
+                updatePlayStateUI(true);
+                startInsightRotation();
+            }).catch(error => {
+                console.warn("Playback error:", error);
+                indicator.innerHTML = '<span class="text-rose-500 font-bold">再生可能状態: ファイル準備完了</span>';
+                aiStatusGuide.innerText = "▶ ボタンを押すと再生を開始できます";
+                updatePlayStateUI(false);
+            });
+
+            insightPanel.classList.remove('hidden');
+            renderCurrentInsight();
+            
+            // 再生画面と枠下のプレイヤーが綺麗に画面内に収まる位置へスクロール
+            insightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
             // インサイトデータの設定（配列で保持）
             currentInsights = Array.isArray(insights) ? insights : [insights];
