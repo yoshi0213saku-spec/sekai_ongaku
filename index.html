@@ -326,6 +326,28 @@
                             </div>
                         </a>
 
+                        <!-- 10. サンバ -->
+                        <a href="#cat-samba" class="category-card p-4 bg-gradient-to-br from-white via-slate-50/50 to-amber-50/40 rounded-2xl border border-amber-200 hover:border-amber-400 transition-all block group shadow-sm">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100/90 border border-amber-300 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
+                                    <svg class="cat-svg w-5 h-5 text-amber-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="32" cy="32" r="18" fill="#F59E0B" fill-opacity="0.3"/>
+                                        <path d="M32 10V18M32 46V54M10 32H18M46 32H54M16 16L22 22M42 42L48 48M16 48L22 42M42 22L48 16" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+                                        <circle cx="32" cy="32" r="10" fill="#10B981" fill-opacity="0.8"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="text-sm font-black text-gray-800 group-hover:text-amber-700 transition-colors flex items-center gap-1.5">
+                                            サンバ
+                                            <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">ブラジル</span>
+                                        </h4>
+                                    </div>
+                                    <p class="text-[11px] text-gray-500 leading-relaxed">太陽の歓喜と躍動のポリリズム。熱帯の情熱とアフリカ由来のシンコペーションが織りなす生命の讃歌。</p>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
                 </section>
             </div>
@@ -700,12 +722,48 @@
                             </div>
 
                             <div onclick="playTrack('./music_yukino_hateni.mp3', '雪の果てに君を想う', [
-                                '地平線まで続く雪原の旅路を想起させるしんしんと響く音色。途方もない孤独と、それを包み込む雄大な大自然の抒情。',
+                                '地平線まで続く雪原の旅路を想起させるしんしんと響く音色。途途もない孤独と、それを包み込む雄大な大自然の抒情。',
                                 'ロシアのロマンティシズムを象徴するドラマチックな旋律展開。静寂から溢れ出す感情の高まりと切なくも美しい歌声。',
                                 '厳しい冬を越えて春を待つ不屈の心。遠く離れた人へ寄せる変わらぬ想いが、雪解けの光のように静かに満ちていきます。'
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-indigo-100/80 hover:border-indigo-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">雪の果てに君を想う</h4>
                                 <p class="text-[10px] text-indigo-600 font-semibold uppercase mt-0.5">ロシア・ロマンス • music_yukino_hateni</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カテゴリー: サンバ -->
+                    <div id="cat-samba" class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3 scroll-mt-6">
+                        <div class="flex items-center space-x-2.5 pb-2.5 border-b border-amber-300/60">
+                            <div class="w-7 h-7 rounded-lg bg-amber-100 border border-amber-300 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+                                <svg class="w-4 h-4 text-amber-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="32" cy="32" r="18" fill="#F59E0B" fill-opacity="0.3"/>
+                                    <path d="M32 10V18M32 46V54M10 32H18M46 32H54M16 16L22 22M42 42L48 48M16 48L22 42M42 22L48 16" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="32" cy="32" r="10" fill="#10B981" fill-opacity="0.8"/>
+                                </svg>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-amber-900 tracking-wider">サンバ</h3>
+                                <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100/90 text-emerald-800 border border-emerald-200">ブラジル</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div onclick="playTrack('./music_sanba_taiyou_to_umi.mp3', 'A Festa do Sol e do Mar（太陽と海の祭り）', [
+                                'リオの眩しい太陽と南大西洋の波音を包み込むパンデイロとアゴゴの打動。熱帯の豊かな自然が育む生命の歓喜。',
+                                'シンコペーションがもたらす身体の自然なウネリ。日常の憂いをステップで踏み越える、ブラジル人の底抜けの明るさと前向きな心。',
+                                'カーニバルへと繋がる共同体の熱気。アフリカの伝統と南米の太陽が融合した、自由とパッションに満ちた民衆の祝祭劇。'
+                            ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-amber-200/80 hover:border-amber-400 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">A Festa do Sol e do Mar（太陽と海の祭り）</h4>
+                                <p class="text-[10px] text-amber-600 font-semibold uppercase mt-0.5">サンバ • music_sanba_taiyou_to_umi</p>
+                            </div>
+
+                            <div onclick="playTrack('./music_tayou_karnibaru.mp3', '太陽とカーニバル', [
+                                'スルド（大太鼓）の重低音が地響きのように刻む躍動。熱狂のパレード（エスコーラ・ジ・サンバ）が描く不屈の生命力。',
+                                '弾けるようなボーカルと打楽器の会話。どんな逆境にあっても「今この瞬間の歓喜」を全身で讃える開放的な国民性。',
+                                '大地のうねりと共に響く大合唱。太陽の光を浴びて街全体が揺れる、情熱と解放感に満ちたブラジル伝統のカーニバル。'
+                            ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-amber-200/80 hover:border-amber-400 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">太陽とカーニバル</h4>
+                                <p class="text-[10px] text-amber-600 font-semibold uppercase mt-0.5">サンバ • music_tayou_karnibaru</p>
                             </div>
                         </div>
                     </div>
