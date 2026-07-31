@@ -91,7 +91,6 @@
 
     <div class="max-w-2xl mx-auto px-4 py-8 md:py-12">
 
-        <!-- ヘッダーセクション -->
         <header class="text-center mb-10 fade-in" style="animation-delay: 0.05s;">
             <div class="inline-flex items-center space-x-2 bg-purple-50 px-4 py-1.5 rounded-full mb-5 border border-purple-100">
                 <span class="relative flex h-2 w-2">
@@ -111,18 +110,19 @@
 
         <div class="space-y-8 fade-in" style="animation-delay: 0.1s;">
             
+            <!-- アーカイブ概要セクション -->
             <div class="glass-card rounded-3xl p-6 md:p-8 space-y-6 border border-gray-100 bg-gradient-to-br from-white via-purple-50/20 to-white">
                 <section>
                     <h2 class="text-xs font-bold text-purple-500 uppercase tracking-[0.3em] mb-3">Archive Overview</h2>
                     
                     <!-- アーカイブ概要 タイトル -->
-                    <h3 class="text-base md:text-lg font-bold text-gray-900 leading-snug mb-4 title-serif border-l-4 border-purple-500 pl-3">
+                    <h3 class="text-base md:text-lg font-bold text-purple-900 leading-snug mb-4 title-serif border-l-4 border-purple-500 pl-3">
                         AIが創り出す世界の音楽とともに、心で巡る音楽の旅をお楽しみください。
                     </h3>
 
                     <!-- アーカイブ概要 本文 -->
                     <div class="text-xs md:text-sm text-gray-600 leading-relaxed space-y-3">
-                        <p>世界には、それぞれ異なる文化や歴史があり、人々の暮らしがあります。そして、その国ならではの美しい音楽が息づいています。</p>
+                        <p>世界には、それぞれ異なる文化や歴史があり、人々の暮らしがあります。独立した風土の中で、その国ならではの美しい音楽が息づいています。</p>
                         <p>この「AIで楽しむ世界の音楽」では、世界各国を代表する音楽ジャンルを、AIの技術を活用して制作しました。</p>
                         <p>音楽には、その国の風景や街並み、人々の笑顔や暮らし、そして心が映し出されています。一曲一曲を聴きながら、その国を旅しているような気分を味わっていただければ幸いです。</p>
                         <p class="font-semibold text-purple-800 pt-1">さあ、世界への音楽の旅に出かけましょう。</p>
@@ -695,12 +695,11 @@
 
                     if (svgIcon && iconContainer) {
                         iconContainer.innerHTML = svgIcon.outerHTML;
-                        // アイコンの色を白系統に統一調整
                         const copiedSvg = iconContainer.querySelector('svg');
-                        if (copiedSvg) copiedSvg.className.baseVal = "w-5 h-5 text-white";
+                        if (copiedSvg) copiedSvg.setAttribute('class', 'w-5 h-5 text-white');
                     }
-                    if (catName && catNameText) catNameText.innerText = catName.innerText;
-                    if (countryName && countryBadge) countryBadge.innerText = countryName.innerText;
+                    if (catName && catNameText) catNameText.innerText = catName.innerText.trim();
+                    if (countryName && countryBadge) countryBadge.innerText = countryName.innerText.trim();
                 }
             }
 
@@ -710,62 +709,33 @@
                 element.classList.add('track-active', 'bg-white', 'shadow-md');
             }
 
-            // インサイトデータの設定（配列で保持）
+            // インサイトデータの設定
             currentInsights = Array.isArray(insights) ? insights : [insights];
             currentInsightIndex = 0;
 
+            // パネルを表示
+            if (insightPanel) insightPanel.classList.remove('hidden');
+            renderCurrentInsight();
+
             audio.src = url;
-            indicator.innerText = "読込中...";
-            aiTrackTitle.innerText = title;
-            aiStatusGuide.innerText = "読み込み中...";
+            if (indicator) indicator.innerText = "読込中...";
+            if (aiTrackTitle) aiTrackTitle.innerText = title;
+            if (aiStatusGuide) aiStatusGuide.innerText = "読み込み中...";
             
             audio.play().then(() => {
-                indicator.innerText = "再生中: " + title;
+                if (indicator) indicator.innerText = "再生中: " + title;
                 updatePlayStateUI(true);
                 startInsightRotation();
             }).catch(error => {
-                console.warn("Playback error:", error);
-                indicator.innerHTML = '<span class="text-rose-500 font-bold">再生可能状態: ファイル準備完了</span>';
-                aiStatusGuide.innerText = "▶ ボタンを押すと再生を開始できます";
+                console.warn("Playback notification:", error);
+                if (indicator) indicator.innerHTML = '<span class="text-rose-500 font-bold">再生可能状態: ファイル準備完了</span>';
+                if (aiStatusGuide) aiStatusGuide.innerText = "▶ ボタンを押すと再生を開始できます";
                 updatePlayStateUI(false);
             });
 
-            insightPanel.classList.remove('hidden');
-            renderCurrentInsight();
-            
-            // 再生画面と枠下のプレイヤーが綺麗に画面内に収まる位置へスクロール
-            insightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-            // インサイトデータの設定（配列で保持）
-            currentInsights = Array.isArray(insights) ? insights : [insights];
-            currentInsightIndex = 0;
-
-            audio.src = url;
-            indicator.innerText = "読込中...";
-            aiTrackTitle.innerText = title;
-            aiStatusGuide.innerText = "読み込み中...";
-            
-            audio.play().then(() => {
-                indicator.innerText = "再生中: " + title;
-                updatePlayStateUI(true);
-                startInsightRotation();
-            }).catch(error => {
-                console.warn("Playback error:", error);
-                indicator.innerHTML = '<span class="text-rose-500 font-bold">再生可能状態: ファイル準備完了</span>';
-                aiStatusGuide.innerText = "▶ ボタンを押すと再生を開始できます";
-                updatePlayStateUI(false);
-            });
-
-            insightPanel.classList.remove('hidden');
-            renderCurrentInsight();
-            
-            // スマホ画面でも音声プレイヤー（再生時間）とコメント欄が両方見えるようスクロール位置を調整
-            const audioContainer = document.getElementById('audio-container');
-            if (audioContainer) {
-                audioContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                insightPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // 再生画面枠が見える位置へスムーススクロール
+            if (insightPanel) {
+                insightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
@@ -773,9 +743,8 @@
             const insightText = document.getElementById('ai-insight-text');
             if (!insightText || currentInsights.length === 0) return;
 
-            // テキスト更新とフェードアニメーション適用
             insightText.classList.remove('insight-text-anim');
-            void insightText.offsetWidth; // リフロー発生
+            void insightText.offsetWidth; // リフロー発生でアニメーションリセット
             insightText.innerText = currentInsights[currentInsightIndex] || "";
             insightText.classList.add('insight-text-anim');
         }
@@ -801,7 +770,7 @@
 
         function togglePlayPause() {
             const audio = document.getElementById('main-audio');
-            if (!audio.src) return;
+            if (!audio || !audio.src) return;
 
             if (audio.paused) {
                 audio.play().then(() => {
@@ -819,15 +788,16 @@
             const playIcon = document.getElementById('ai-play-icon');
             const statusGuide = document.getElementById('ai-status-guide');
             const indicator = document.getElementById('playing-indicator');
-            const trackTitle = document.getElementById('ai-track-title').innerText;
+            const trackTitleEl = document.getElementById('ai-track-title');
+            const trackTitle = trackTitleEl ? trackTitleEl.innerText : '';
 
             if (isPlaying) {
-                playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-                statusGuide.innerText = "🎵 楽曲を再生中（コメントが約10秒ごとに順次切り替わります）";
+                if (playIcon) playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+                if (statusGuide) statusGuide.innerText = "🎵 楽曲を再生中（コメントが約10秒ごとに順次切り替わります）";
                 if (indicator) indicator.innerText = "再生中: " + trackTitle;
             } else {
-                playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-                statusGuide.innerText = "▶ ボタンを押すと再生を再開できます";
+                if (playIcon) playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+                if (statusGuide) statusGuide.innerText = "▶ ボタンを押すと再生を再開できます";
                 if (indicator && indicator.innerText.includes('再生中')) {
                     indicator.innerText = "一時停止中";
                 }
