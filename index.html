@@ -729,11 +729,8 @@
                 updatePlayStateUI(false);
             });
 
-            // 再生画面枠およびプレイヤーが見える位置へスクロール
-            const audioContainer = document.getElementById('audio-container');
-            if (audioContainer) {
-                audioContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else if (insightPanel) {
+            // 再生画面枠全体（パネルとプレイヤー）が見える位置へスクロール
+            if (insightPanel) {
                 insightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
