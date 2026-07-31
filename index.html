@@ -122,7 +122,7 @@
 
                     <!-- アーカイブ概要 本文 -->
                     <div class="text-xs md:text-sm text-gray-600 leading-relaxed space-y-3">
-                        <p>世界には、それぞれ異なる文化や歴史があり、人々の暮らしがあります。独立した風土の中で、その国ならではの美しい音楽が息づいています。</p>
+                        <p>世界には、それぞれ異なる文化や歴史があり、人々の暮らしがあります。そして、その国ならではの美しい音楽が息づいています。</p>
                         <p>この「AIで楽しむ世界の音楽」では、世界各国を代表する音楽ジャンルを、AIの技術を活用して制作しました。</p>
                         <p>音楽には、その国の風景や街並み、人々の笑顔や暮らし、そして心が映し出されています。一曲一曲を聴きながら、その国を旅しているような気分を味わっていただければ幸いです。</p>
                         <p class="font-semibold text-purple-800 pt-1">さあ、世界への音楽の旅に出かけましょう。</p>
@@ -305,6 +305,27 @@
                             </div>
                         </a>
 
+                        <!-- 9. ロシア・ロマンス -->
+                        <a href="#cat-russian-romance" class="category-card p-4 bg-gradient-to-br from-white via-slate-50/50 to-indigo-50/30 rounded-2xl border border-indigo-100 hover:border-indigo-300 transition-all block group shadow-sm">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-100/80 border border-indigo-200/80 flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
+                                    <svg class="cat-svg w-5 h-5 text-indigo-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 12L36 24L48 24L38 32L42 44L32 36L22 44L26 32L16 24L28 24Z" fill="#818CF8" fill-opacity="0.5"/>
+                                        <path d="M18 50C24 42 40 42 46 50" stroke="#4338CA" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="text-sm font-black text-gray-800 group-hover:text-indigo-700 transition-colors flex items-center gap-1.5">
+                                            ロシア・ロマンス
+                                            <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">ロシア</span>
+                                        </h4>
+                                    </div>
+                                    <p class="text-[11px] text-gray-500 leading-relaxed">広大な雪原と静寂に紡がれる情熱と哀愁（トスカ）。マイナー旋律と美しく切ないギターの爪弾き。</p>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
                 </section>
             </div>
@@ -357,6 +378,7 @@
                     </audio>
                 </div>
 
+                <!-- プレイリスト -->
                 <div class="space-y-6" id="playlist">
 
                     <!-- カテゴリー: 演歌 -->
@@ -640,6 +662,41 @@
                             ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-sky-100/80 hover:border-sky-300 hover:bg-white hover:shadow-sm transition-all duration-300">
                                 <h4 class="text-sm font-bold text-gray-800">風のナポリに抱かれて</h4>
                                 <p class="text-[10px] text-sky-600 font-semibold uppercase mt-0.5">カンツオーネ • music_napori_2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カテゴリー: ロシア・ロマンス -->
+                    <div id="cat-russian-romance" class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-100 space-y-3 scroll-mt-6">
+                        <div class="flex items-center space-x-2.5 pb-2.5 border-b border-indigo-200/60">
+                            <div class="w-7 h-7 rounded-lg bg-indigo-100 border border-indigo-200 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+                                <svg class="w-4 h-4 text-indigo-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 12L36 24L48 24L38 32L42 44L32 36L22 44L26 32L16 24L28 24Z" fill="#818CF8" fill-opacity="0.5"/>
+                                    <path d="M18 50C24 42 40 42 46 50" stroke="#4338CA" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xs font-black text-indigo-900 tracking-wider">ロシア・ロマンス</h3>
+                                <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-indigo-100/80 text-indigo-700 border border-indigo-200">ロシア</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div onclick="playTrack('./music_yukino_hateni_roshiago.mp3', 'Я думаю о тебе за снегами', [
+                                '果てしなく広がる白銀の世界と静寂。厳しい冬の寒さと対比される、胸の奥で静かに燃え続ける情熱的な愛。',
+                                'ロシア・ロマンス特有のマイナー旋律と抒情的な弦の響き。言葉の響きに宿る、ロシア文学に通じる深い哀愁（トスカ）。',
+                                '降り積もる雪の向こうにいる大切な人への祈り。厳寒の風土だからこそ研ぎ澄まされる、人間の魂の温もりと高潔な情熱。'
+                            ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-indigo-100/80 hover:border-indigo-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">Я думаю о тебе за снегами</h4>
+                                <p class="text-[10px] text-indigo-600 font-semibold uppercase mt-0.5">ロシア・ロマンス • music_yukino_hateni_roshiago</p>
+                            </div>
+
+                            <div onclick="playTrack('./music_yukino_hateni.mp3', '雪の果てに君を想う', [
+                                '地平線まで続く雪原の旅路を想起させるしんしんと響く音色。途方もない孤独と、それを包み込む雄大な大自然の抒情。',
+                                'ロシアのロマンティシズムを象徴するドラマチックな旋律展開。静寂から溢れ出す感情の高まりと切なくも美しい歌声。',
+                                '厳しい冬を越えて春を待つ不屈の心。遠く離れた人へ寄せる変わらぬ想いが、雪解けの光のように静かに満ちていきます。'
+                            ], this)" class="group cursor-pointer p-3.5 rounded-xl bg-white/80 border border-indigo-100/80 hover:border-indigo-300 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <h4 class="text-sm font-bold text-gray-800">雪の果てに君を想う</h4>
+                                <p class="text-[10px] text-indigo-600 font-semibold uppercase mt-0.5">ロシア・ロマンス • music_yukino_hateni</p>
                             </div>
                         </div>
                     </div>
